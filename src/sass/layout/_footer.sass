@@ -1,3 +1,55 @@
 .footer
-	padding: 16px 0
-	background: #eee
+  padding: 110px 0 225px
+  background: $black
+  .logo .icon--logo
+    fill: $white
+
+  &__content
+    display: flex
+    justify-content: space-between
+
+  &__box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__box:nth-child(1)
+
+    .footer__link
+      font-family: $aclonica
+      font-size: 20px
+      line-height: 36px
+      margin-bottom: 6px
+      color: $white
+
+  &__box:nth-child(2)
+
+    .footer__link:first-child
+      font-weight: 500
+      font-size: 18px
+      line-height: 20px
+      color: $white
+      margin-bottom: 42px
+
+    .footer__link:not(:first-child)
+      font-weight: 400
+      font-size: 16px
+      line-height: 20px
+      color: $white
+      margin-bottom: 37px
+
+  &__box:nth-child(3)
+
+    .footer__link:first-child
+      font-weight: 500
+      font-size: 18px
+      line-height: 20px
+      color: $white
+      margin-bottom: 45px
+
+    .footer__link:not(:first-child)
+      font-weight: 400
+      font-size: 16px
+      line-height: 20px
+      color: $white
+      margin-bottom: 33px

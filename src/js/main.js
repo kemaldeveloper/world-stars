@@ -149,7 +149,7 @@ const mfpPopup = function (popupID, source) {
 
 const topSLiderEl = $('.top-slider__slide').clone();
 
-new Swiper('.top-slider', {
+const topSlider = new Swiper('.top-slider', {
   slidesPerView: 'auto',
   // slidesPerGroup: 2,
   simulateTouch: true,
@@ -171,6 +171,8 @@ new Swiper('.top-slider', {
     },
   },
 });
+
+topSlider.autoplay.running = true;
 
 $('.slider-meets').slick({
   infinite: true,

@@ -6,9 +6,12 @@
   "license": "ISC",
   "type": "module",
   "main": "gulpfile.js",
+  "homepage": "https://kemaldeveloper.github.io/world-stars/",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "yarn build"
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
@@ -38,6 +41,7 @@
     "ssi": "0.3.0"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^9.4.1"
   }

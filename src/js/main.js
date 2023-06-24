@@ -174,16 +174,6 @@ const topSlider = new Swiper('.top-slider', {
 
 topSlider.autoplay.running = true;
 
-$('.slider-meets').slick({
-  infinite: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  arrows: false,
-  variableWidth: true,
-  // autoplay: true,
-  // autoplaySpeed: 100,
-});
-
 const cloningSliderElements = $('.meets__track-item').clone();
 
 console.log(cloningSliderElements);
@@ -194,7 +184,7 @@ const swiper = new Swiper('.meets__track', {
   spaceBetween: 30,
   wrapperClass: 'meets__track-wrapper',
   slideClass: 'meets__track-item',
-  speed: 2500,
+  speed: 2050,
   simulateTouch: false,
   freeMode: {
     enabled: true,
@@ -216,7 +206,7 @@ new Swiper('.meets__ribbon', {
   spaceBetween: 0,
   wrapperClass: 'meets__ribbon-wrapper',
   slideClass: 'meets__ribbon-item',
-  speed: 5500,
+  speed: 9500,
   simulateTouch: false,
   freeMode: {
     enabled: true,
@@ -224,5 +214,15 @@ new Swiper('.meets__ribbon', {
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
+  },
+});
+
+new Swiper('.slider-meets', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  keyboard: {
+    enabled: true,
+    onlyOnViewport: true,
   },
 });

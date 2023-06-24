@@ -1,27 +1,67 @@
 .btn
-	position: relative
-	display: inline-block
-	font-size: 14px
-	border-radius: 4px
-	color: #fff
-	text-align: center
-	text-decoration: none
-	padding: 10px 30px
-	background-color: $c1
-	border: none
-	outline: none
-	transition: all .3s ease
-	user-select: none
-	&:focus:not(.disabled),
-	&:hover:not(.disabled)
-		outline: none
-		cursor: pointer
-		color: #fff
-		text-decoration: none
-		background-color: lighten($c1, 10%)
+  position: relative
+  display: inline-block
+  font-size: 14px
+  border-radius: 4px
+  color: #fff
+  text-align: center
+  text-decoration: none
+  padding: 10px 30px
+  background-color: $c1
+  border: none
+  outline: none
+  transition: all .3s ease
+  user-select: none
+  &:focus:not(.disabled),
+  &:hover:not(.disabled)
+    outline: none
+    cursor: pointer
+    color: #fff
+    text-decoration: none
+    background-color: lighten($c1, 10%)
 
-	&:active:not(.disabled)
-		background-color: darken($c1, 5%)
+  &:active:not(.disabled)
+    background-color: darken($c1, 5%)
 
-	&.disabled
-		opacity: .4
+  &.disabled
+    opacity: .4
+
+.top-slider-prev
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 87px
+  height: 87px
+  border-radius: 50%
+  border: 1px solid $black
+  background: transparent
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  user-select: none
+
+  .icon--top-arrow
+    width: 22px
+    height: 11px
+
+.top-slider-next
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 88px
+  height: 87px
+  border-radius: 50%
+  border: 1px solid $black
+  background: transparent
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 1
+  user-select: none
+
+  .icon--top-arrow
+    width: 22px
+    height: 11px
+    fill: $black
+    transform: rotate(180deg)

@@ -51,7 +51,7 @@ $('.js-popup').on('click', function (event) {
 });
 
 // Mobile menu toggle
-$('.js-menu').on('click',function () {
+$('.js-menu').on('click', function () {
   $(this).toggleClass('is-active');
   $('.menu').toggleClass('is-opened');
 });
@@ -63,7 +63,7 @@ $('input[type="tel"]').inputmask({
 });
 
 // E-mail Ajax Send
-$('form').on('submit',function (e) {
+$('form').on('submit', function (e) {
   e.preventDefault();
 
   let form = $(this);
@@ -137,3 +137,90 @@ const mfpPopup = function (popupID, source) {
     // }
   });
 };
+
+// $('.top-slider').slick({
+//   infinite: true,
+//   slidesToShow: 10,
+//   slidesToScroll: 5,
+//   prevArrow: $('.prev-btn'),
+//   nextArrow: $('.next-btn'),
+//   variableWidth: true,
+// });
+
+const topSLiderEl = $('.top-slider__slide').clone();
+
+new Swiper('.top-slider', {
+  slidesPerView: 'auto',
+  // slidesPerGroup: 2,
+  simulateTouch: true,
+  spaceBetween: 15,
+  loop: true,
+  loopedSlides: 10,
+  speed: 500,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    prevEl: '.top-slider-prev',
+    nextEl: '.top-slider-next',
+  },
+  on: {
+    beforeInit: function () {
+      $('.top-slider__wrapper').append(topSLiderEl);
+    },
+  },
+});
+
+$('.slider-meets').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: false,
+  variableWidth: true,
+  // autoplay: true,
+  // autoplaySpeed: 100,
+});
+
+const cloningSliderElements = $('.meets__track-item').clone();
+
+console.log(cloningSliderElements);
+
+const swiper = new Swiper('.meets__track', {
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  wrapperClass: 'meets__track-wrapper',
+  slideClass: 'meets__track-item',
+  speed: 2500,
+  simulateTouch: false,
+  freeMode: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  on: {
+    beforeInit: function () {
+      $('.meets__track-wrapper').append(cloningSliderElements);
+    },
+  },
+});
+
+new Swiper('.meets__ribbon', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  wrapperClass: 'meets__ribbon-wrapper',
+  slideClass: 'meets__ribbon-item',
+  speed: 5500,
+  simulateTouch: false,
+  freeMode: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+});

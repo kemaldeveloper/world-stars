@@ -172,15 +172,11 @@ const topSlider = new Swiper('.top-slider', {
   },
 });
 
-topSlider.autoplay.running = true;
-
 const cloningSliderElements = $('.meets__track-item').clone();
-
-console.log(cloningSliderElements);
 
 const swiper = new Swiper('.meets__track', {
   loop: true,
-  slidesPerView: 5,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   wrapperClass: 'meets__track-wrapper',
   slideClass: 'meets__track-item',

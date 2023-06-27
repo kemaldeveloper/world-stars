@@ -1,0 +1,65 @@
+.pagination
+  display: flex
+  align-items: center
+
+  &__descr
+    font-weight: 400
+    font-size: 21px
+    line-height: 130%
+    margin-right: 35px
+
+  &__current-page
+    font-weight: 400
+    font-size: 21px
+    line-height: 130%
+    margin-right: 5px
+
+  &__page-of
+    font-weight: 400
+    font-size: 21px
+    line-height: 130%
+    margin-right: 5px
+
+  &__last-page
+    font-weight: 400
+    font-size: 21px
+    line-height: 130%
+    margin-right: 33px
+
+  &__btns
+    position: relative
+    width: 60px
+    height: 40px
+    background: $accent-grnt
+    border-radius: 6px
+
+  &-prev
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 40px
+    border-radius: 6px
+    .icon--pagination-arrow
+      width: 7.6px
+      height: 11px
+      fill: $white
+
+  &-next
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 40px
+    border-radius: 6px
+    .icon--pagination-arrow
+      width: 7.6px
+      height: 11px
+      fill: $white
+      transform: rotate(180deg)

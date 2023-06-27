@@ -1,31 +1,3 @@
-.btn
-  position: relative
-  display: inline-block
-  font-size: 14px
-  border-radius: 4px
-  color: #fff
-  text-align: center
-  text-decoration: none
-  padding: 10px 30px
-  background-color: $c1
-  border: none
-  outline: none
-  transition: all .3s ease
-  user-select: none
-  &:focus:not(.disabled),
-  &:hover:not(.disabled)
-    outline: none
-    cursor: pointer
-    color: #fff
-    text-decoration: none
-    background-color: lighten($c1, 10%)
-
-  &:active:not(.disabled)
-    background-color: darken($c1, 5%)
-
-  &.disabled
-    opacity: .4
-
 .top-slider-prev
   display: flex
   align-items: center
@@ -65,3 +37,80 @@
     height: 11px
     fill: $black
     transform: rotate(180deg)
+
+.filter-btn
+  font-weight: 400
+  font-size: 20px
+  color: $black
+  border-radius: 5px
+  border: 1px solid $black
+  background: transparent
+  position: relative
+  z-index: 1
+  padding: 11px 24px
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    background: $accent-grnt
+    transition: all 0.3s ease
+    z-index: -1
+    border-radius: 5px
+    opacity: 0
+    visibility: hidden
+  &:hover
+    border: none
+    padding: 12px 25px
+    color: $white
+    &::after
+      opacity: 1
+      visibility: visible
+
+.submit
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 293px
+  height: 59px
+  background: $accent-grnt
+  border: none
+  border-radius: 10px
+  font-weight: 400
+  font-size: 21px
+  line-height: 120%
+  color: $white
+  column-gap: 21px
+  .circle
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 34.15px
+    height: 34.15px
+    +border(50%, 1px, $white)
+  .icon--submit
+    width: 18px
+    height: 14px
+    fill: $white
+
+.favourite-btn
+  border: none
+  background: transparent
+  position: absolute
+  bottom: 13px
+  right: 11px
+  z-index: 1
+  span
+    color: $accent-grnt
+  .icon--star
+    width: 29px
+    height: 29px
+    fill: $white
+
+.favourite-btn
+  &.fav-active
+    .icon--star
+      fill: #f27252 !important

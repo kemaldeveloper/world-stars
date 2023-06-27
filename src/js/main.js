@@ -29,7 +29,15 @@ const MQ = {
 MQ.updateState();
 
 $(document).ready(function () {
-  //
+  $('.choose-form__img-label .choose-form__label-content').on('click', function (event) {
+    event.preventDefault();
+    $(this).toggleClass('label-active').find('.favourite-btn').toggleClass('fav-active');
+  });
+
+  // $('.choose-form__img-label .favourite-btn').on('click', function (event) {
+  //   event.preventDefault();
+  //   $(this).toggleClass('fav-active');
+  // });
 });
 
 $(window).on('load', function () {
@@ -63,58 +71,58 @@ $('input[type="tel"]').inputmask({
 });
 
 // E-mail Ajax Send
-$('form').on('submit', function (e) {
-  e.preventDefault();
+// $('form').on('submit', function (e) {
+//   e.preventDefault();
 
-  let form = $(this);
-  let formData = {};
-  formData.data = {};
+//   let form = $(this);
+//   let formData = {};
+//   formData.data = {};
 
-  // Serialize
-  form.find('input, textarea').each(function () {
-    let name = $(this).attr('name');
-    let title = $(this).attr('data-name');
-    let value = $(this).val();
+//   // Serialize
+//   form.find('input, textarea').each(function () {
+//     let name = $(this).attr('name');
+//     let title = $(this).attr('data-name');
+//     let value = $(this).val();
 
-    formData.data[name] = {
-      title: title,
-      value: value,
-    };
+//     formData.data[name] = {
+//       title: title,
+//       value: value,
+//     };
 
-    if (name === 'subject') {
-      formData.subject = {
-        value: value,
-      };
-      delete formData.data.subject;
-    }
-  });
+//     if (name === 'subject') {
+//       formData.subject = {
+//         value: value,
+//       };
+//       delete formData.data.subject;
+//     }
+//   });
 
-  $.ajax({
-    type: 'POST',
-    url: 'mail/mail.php',
-    dataType: 'json',
-    data: formData,
-  }).done(function (data) {
-    if (data.status === 'success') {
-      if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-        form.find('.form-result').addClass('form-result--success');
-      } else {
-        mfpPopup('#success');
-      }
+//   $.ajax({
+//     type: 'POST',
+//     url: 'mail/mail.php',
+//     dataType: 'json',
+//     data: formData,
+//   }).done(function (data) {
+//     if (data.status === 'success') {
+//       if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
+//         form.find('.form-result').addClass('form-result--success');
+//       } else {
+//         mfpPopup('#success');
+//       }
 
-      setTimeout(function () {
-        if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-          form.find('.form-result').removeClass('form-result--success');
-        }
-        $.magnificPopup.close();
-        form.trigger('reset');
-      }, 3000);
-    } else {
-      alert('Ajax result: ' + data.status);
-    }
-  });
-  return false;
-});
+//       setTimeout(function () {
+//         if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
+//           form.find('.form-result').removeClass('form-result--success');
+//         }
+//         $.magnificPopup.close();
+//         form.trigger('reset');
+//       }, 3000);
+//     } else {
+//       alert('Ajax result: ' + data.status);
+//     }
+//   });
+//   return false;
+// });
 
 const mfpPopup = function (popupID, source) {
   // https://dimsemenov.com/plugins/magnific-popup/
@@ -138,20 +146,10 @@ const mfpPopup = function (popupID, source) {
   });
 };
 
-// $('.top-slider').slick({
-//   infinite: true,
-//   slidesToShow: 10,
-//   slidesToScroll: 5,
-//   prevArrow: $('.prev-btn'),
-//   nextArrow: $('.next-btn'),
-//   variableWidth: true,
-// });
-
 const topSLiderEl = $('.top-slider__slide').clone();
 
 const topSlider = new Swiper('.top-slider', {
   slidesPerView: 'auto',
-  // slidesPerGroup: 2,
   simulateTouch: true,
   spaceBetween: 15,
   loop: true,
@@ -222,3 +220,90 @@ new Swiper('.slider-meets', {
     onlyOnViewport: true,
   },
 });
+
+//
+var x, i, j, l, ll, selElmnt, a, b, c;
+/* Look for any elements with the class "custom-select": */
+x = document.getElementsByClassName('custom-select');
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName('select')[0];
+  ll = selElmnt.length;
+  /* For each element, create a new DIV that will act as the selected item: */
+  a = document.createElement('DIV');
+  a.setAttribute('class', 'select-selected');
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /* For each element, create a new DIV that will contain the option list: */
+  b = document.createElement('DIV');
+  b.setAttribute('class', 'select-items select-hide');
+  for (j = 1; j < ll; j++) {
+    /* For each option in the original select element,
+    create a new DIV that will act as an option item: */
+    c = document.createElement('DIV');
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener('click', function (e) {
+      /* When an item is clicked, update the original select box,
+        and the selected item: */
+      var y, i, k, s, h, sl, yl;
+      s = this.parentNode.parentNode.getElementsByTagName('select')[0];
+      sl = s.length;
+      h = this.parentNode.previousSibling;
+      for (i = 0; i < sl; i++) {
+        if (s.options[i].innerHTML == this.innerHTML) {
+          s.selectedIndex = i;
+          h.innerHTML = this.innerHTML;
+          y = this.parentNode.getElementsByClassName('same-as-selected');
+          yl = y.length;
+          for (k = 0; k < yl; k++) {
+            y[k].removeAttribute('class');
+          }
+          this.setAttribute('class', 'same-as-selected');
+          break;
+        }
+      }
+      h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener('click', function (e) {
+    /* When the select box is clicked, close any other select boxes,
+    and open/close the current select box: */
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle('select-hide');
+    this.classList.toggle('select-arrow-active');
+  });
+}
+
+function closeAllSelect(elmnt) {
+  /* A function that will close all select boxes in the document,
+  except the current select box: */
+  var x,
+    y,
+    i,
+    xl,
+    yl,
+    arrNo = [];
+  x = document.getElementsByClassName('select-items');
+  y = document.getElementsByClassName('select-selected');
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i);
+    } else {
+      y[i].classList.remove('select-arrow-active');
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add('select-hide');
+    }
+  }
+}
+
+/* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+document.addEventListener('click', closeAllSelect);

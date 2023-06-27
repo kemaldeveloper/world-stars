@@ -1,0 +1,70 @@
+.custom-select
+  position: relative
+  font-family: $deff
+  user-select: none
+
+  & select
+    display: none
+
+  &-icon
+    position: absolute
+    top: 15px
+    right: 15px
+    .icon--arrow
+      width: 15px
+      height: 10px
+      fill: $white
+
+.select-selected
+  background: $accent-grnt
+
+  // &::after
+  //   position: absolute
+  //   content: "<svg class='icon icon--arrow'><use xlink:href='../../../assets/svg-sprite.svg#arrow'></use></svg>"
+  //   top: 14px
+  //   right: 10px
+  //   width: 0
+  //   height: 0
+  //   // border: 6px solid transparent
+  //   // border-color: #fff transparent transparent transparent
+
+  &.select-arrow-active:after
+    border-color: transparent transparent #fff transparent
+    top: 7px
+
+  &.select-arrow-active
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+  .select-items div,&
+    font-weight: 400
+    font-size: 20px
+    color: #ffffff
+    padding: 14px 20px 12px 6px
+    border-radius: 5px
+    border: none
+    cursor: pointer
+
+.select-items
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  z-index: 99
+  background: $accent-grnt
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
+  div
+    font-weight: 400
+    font-size: 16px
+    color: $white
+    padding: 6px
+    cursor: pointer
+    background: transparent
+
+.select-hide
+  display: none
+
+.select-items div:hover, .same-as-selected
+  border-radius: 10px
+  background-color: rgba(0, 0, 0, 0.1)

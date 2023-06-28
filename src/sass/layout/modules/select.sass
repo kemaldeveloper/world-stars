@@ -8,14 +8,21 @@
 .sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
   white-space: nowrap
 
+.sport-select .choices.is-open .choices__inner
+  color: $white
+  border: none
+  padding: 8.5px 8.5px
+  &::after
+    opacity: 1
+    visibility: visible
+
 .sport-select .choices__inner
   padding: 7.5px 7.5px
   border: 1px solid #000
   border-radius: 5px
   position: relative
   z-index: 1
-  // transition: all 3s ease
-  transit
+  // transition: all 0.3s ease
   &::after
     content: ''
     position: absolute
@@ -29,12 +36,12 @@
     background: $accent-grnt
     opacity: 0
     visibility: hidden
-  &:hover
-    border: none
-    padding: 8.5px 8.5px
-    &::after
-      opacity: 1
-      visibility: visible
+  // &:hover
+  //   border: none
+  //   padding: 8.5px 8.5px
+  //   &::after
+  //     opacity: 1
+  //     visibility: visible
 
 .sport-select .choices__list--single
   font-weight: 400
@@ -61,3 +68,8 @@
 
 .choices__list--dropdown .choices__placeholder
   display: none
+
+.sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  font-family: $deff
+  font-weight: 400
+  font-size: 16px

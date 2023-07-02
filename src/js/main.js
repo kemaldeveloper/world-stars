@@ -29,20 +29,17 @@ const MQ = {
 MQ.updateState();
 
 $(document).ready(function () {
-  $('.choose-form__img-label .choose-form__label-content').on('click', function (event) {
-    event.preventDefault();
-    $(this).toggleClass('label-active').find('.favourite-btn').toggleClass('fav-active');
-  });
-
-  // $('.choose-form__img-label .favourite-btn').on('click', function (event) {
-  //   event.preventDefault();
-  //   $(this).toggleClass('fav-active');
+  // $('.choose-form__img-label .choose-form__label-content').on('click', function (event) {
+  //   $(this).toggleClass('label-active').find('.favourite-btn').toggleClass('fav-active');
   // });
+
+  $('.favourite-btn').on('click', function (event) {
+    $(this).parent().toggleClass('label-active');
+    $(this).toggleClass('fav-active');
+  });
 });
 
-$(window).on('load', function () {
-  //
-});
+$(window).on('load', function () {});
 
 $(window).on('resize', function () {
   MQ.updateState();
@@ -221,10 +218,35 @@ new Swiper('.slider-meets', {
   },
 });
 
-const sportSelect = document.querySelector('.js-choice');
+const multiSelect = () => {
+  const selects = document.querySelectorAll('.js-choice');
 
-const sportChoice = new Choices(sportSelect, {
-  searchEnabled: false,
-  resetScrollPosition: false,
-  itemSelectText: '',
+  selects.forEach((item) => {
+    const choices = new Choices(item, {
+      searchEnabled: false,
+      resetScrollPosition: false,
+      itemSelectText: '',
+      allowHTML: false,
+    });
+  });
+};
+
+multiSelect();
+
+const chooseForm = $('#choose-form');
+
+chooseForm.hide();
+
+$('.choose-btn').on('click', function () {
+  localStorage.setItem('choose-news', true);
+
+  $('.choose-news__content-delete').hide(1000, function () {
+    $(this).remove();
+  });
+  chooseForm.show(1000);
 });
+
+if (localStorage.getItem('choose-news')) {
+  $('.choose-news__content-delete').remove();
+  chooseForm.show();
+}

@@ -28,6 +28,7 @@ const cssLibsPaths = [
   'node_modules/magnific-popup/dist/magnific-popup.css',
   'node_modules/swiper/swiper-bundle.min.css',
   'node_modules/choices.js/public/assets/styles/choices.min.css',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
 ];
 
 const jsLibsPaths = [
@@ -36,6 +37,7 @@ const jsLibsPaths = [
   'node_modules/inputmask/dist/jquery.inputmask.min.js',
   'node_modules/swiper/swiper-bundle.min.js',
   'node_modules/choices.js/public/assets/scripts/choices.min.js',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 ];
 
 // Tasks

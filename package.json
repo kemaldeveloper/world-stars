@@ -41,6 +41,7 @@
     "ssi": "0.3.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "choices.js": "^10.2.0",
     "gh-pages": "^5.0.0",
     "slick-carousel": "^1.8.1",

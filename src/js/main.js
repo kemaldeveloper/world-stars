@@ -250,3 +250,8 @@ if (localStorage.getItem('choose-news')) {
   $('.choose-news__content-delete').remove();
   chooseForm.show();
 }
+
+$('.choose-form__header-wrap .filter-btn').on('click', function (event) {
+  event.preventDefault();
+  $(this).not(event.currentTarget).addClass('active-filter');
+});

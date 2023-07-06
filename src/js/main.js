@@ -169,7 +169,7 @@ const topSlider = new Swiper('.top-slider', {
 
 const cloningSliderElements = $('.meets__track-item').clone();
 
-const swiper = new Swiper('.meets__track', {
+new Swiper('.meets__track', {
   loop: true,
   slidesPerView: 'auto',
   spaceBetween: 30,
@@ -216,6 +216,23 @@ new Swiper('.slider-meets', {
     enabled: true,
     onlyOnViewport: true,
   },
+});
+
+new Swiper('.clothing-slider', {
+  direction: 'horizontal',
+  autoHeight: true,
+  navigation: {
+    prevEl: '.clothing-button-prev',
+    nextEl: '.clothing-button-next',
+  },
+});
+
+new Swiper('.accessories-slider', {
+  direction: 'horizontal',
+});
+
+new Swiper('.star-styles-slider', {
+  direction: 'horizontal',
 });
 
 const multiSelect = () => {

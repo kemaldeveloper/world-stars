@@ -1,43 +1,70 @@
 .style
 
   &__title
+    font-weight: 400
+    font-size: 64px
+    line-height: 130%
+    max-width: 529px
+    margin-bottom: 34px
 
   &__content
-    display: flex
-    column-gap: 23px
-    max-height: 527px
+    display: grid
+    grid-template-columns: repeat(3, 383px)
+    justify-content: space-between
 
   &__item
+    position: relative
     border-radius: 15px
-    max-width: 383px
+    width: 383px
+    height: 527px
     background: $white
     padding: 24px 0 0
     user-select: none
 
-.clothing
-
-  .swiper-slide
-    // max-height: 444px
-    img
-      width: 100%
-      height: 100%
-      object-fit: contain
-
   &-navigation
     display: flex
 
-.style-slider
+  &-slider
 
-  .swiper
+    .swiper-slide
+      img
+        width: 100%
+        height: 364px
+        object-fit: contain
 
-    &-wrapper
+  &-button-prev
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    position: relative
+    width: 50%
+    height: 75px
+    border-radius: 0 0 0 15px
+    background: $black
+    padding-left: 47px
+    svg
+      fill: $white
+      width: 54px
+      height: 11px
 
-    &-slide
+  &-button-next
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    position: relative
+    width: 50%
+    height: 75px
+    border-radius: 0 0 15px 0
+    background: $black
+    padding-right: 47px
+    svg
+      width: 53px
+      height: 11px
+      fill: $white
 
-    &-button-prev
-
-    &-button-next
-
-.accessories
-
-.star-styles
+  &__box-descr
+    font-weight: 400
+    font-size: 33px
+    line-height: 130%
+    text-align: center
+    margin-top: 32px

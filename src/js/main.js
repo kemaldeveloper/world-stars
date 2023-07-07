@@ -29,10 +29,6 @@ const MQ = {
 MQ.updateState();
 
 $(document).ready(function () {
-  // $('.choose-form__img-label .choose-form__label-content').on('click', function (event) {
-  //   $(this).toggleClass('label-active').find('.favourite-btn').toggleClass('fav-active');
-  // });
-
   $('.favourite-btn').on('click', function (event) {
     $(this).parent().toggleClass('label-active');
     $(this).toggleClass('fav-active');
@@ -143,6 +139,8 @@ const mfpPopup = function (popupID, source) {
   });
 };
 
+// Sliders begin
+
 const topSLiderEl = $('.top-slider__slide').clone();
 
 const topSlider = new Swiper('.top-slider', {
@@ -218,22 +216,28 @@ new Swiper('.slider-meets', {
   },
 });
 
-new Swiper('.clothing-slider', {
-  direction: 'horizontal',
-  autoHeight: true,
-  navigation: {
-    prevEl: '.clothing-button-prev',
-    nextEl: '.clothing-button-next',
-  },
-});
+// multiSlider function begin
 
-new Swiper('.accessories-slider', {
-  direction: 'horizontal',
-});
+const multiSlider = () => {
+  const styleSliders = document.querySelectorAll('.style__item');
+  styleSliders.forEach((item) => {
+    const slider = new Swiper(item.querySelector('.style-slider'), {
+      navigation: {
+        nextEl: item.querySelector('.style-button-next'),
+        prevEl: item.querySelector('.style-button-prev'),
+      },
+    });
+  });
+  console.log(styleSliders);
+};
 
-new Swiper('.star-styles-slider', {
-  direction: 'horizontal',
-});
+multiSlider();
+
+// multiSlider function end
+
+// Sliders end
+
+// MultiSelect function begin
 
 const multiSelect = () => {
   const selects = document.querySelectorAll('.js-choice');
@@ -249,6 +253,8 @@ const multiSelect = () => {
 };
 
 multiSelect();
+
+// MultiSelect function end
 
 const chooseForm = $('#choose-form');
 
@@ -267,8 +273,3 @@ if (localStorage.getItem('choose-news')) {
   $('.choose-news__content-delete').remove();
   chooseForm.show();
 }
-
-$('.choose-form__header-wrap .filter-btn').on('click', function (event) {
-  event.preventDefault();
-  $(this).not(event.currentTarget).addClass('active-filter');
-});

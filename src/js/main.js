@@ -216,6 +216,14 @@ new Swiper('.slider-meets', {
   },
 });
 
+new Swiper('.shop-slider', {
+  spaceBetween: 32,
+  slidesPerView: 3,
+  keyboard: {
+    enabled: true,
+  },
+});
+
 // multiSlider function begin
 
 const multiSlider = () => {
@@ -228,7 +236,6 @@ const multiSlider = () => {
       },
     });
   });
-  console.log(styleSliders);
 };
 
 multiSlider();

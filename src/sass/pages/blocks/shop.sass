@@ -1,0 +1,80 @@
+.shop
+
+  &__content
+
+  &-slider
+
+  &-slider__img
+    height: 312px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+
+  &-slider-wrapper
+
+  &-slider-slide
+    max-width: 383px
+
+  &-slider-box
+    background: $white
+    border-radius: 10px
+    margin-bottom: 20px
+
+  &-slider-name
+    display: block
+    font-weight: 700
+    font-size: 20px
+    line-height: 130%
+    color: $black
+    margin-bottom: 5px
+
+  &-slider-price
+    display: block
+    font-weight: 400
+    font-size: 20px
+    line-height: 130%
+    color: $black
+
+.buy
+  display: flex
+  align-items: center
+  justify-content: center
+
+  position: relative
+  z-index: 1
+
+  font-weight: 700
+  font-size: 20px
+
+  width: 100%
+  height: 63px
+
+  border: 1px solid $black
+  border-width: 1px 0 0 0
+  border-radius: 0 0 10px 10px
+
+  background: transparent
+  color: $black
+
+  transition: none
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    height: 100%
+    transform: translate(-50%, -50%)
+    background: $accent-grnt
+    transition: all 0.3s ease
+    border-radius: 0 0 10px 10px
+    z-index: -1
+    opacity: 0
+    visibility: hidden
+  &:hover
+    color: $white
+    border: none
+    &::after
+      opacity: 1
+      visibility: visible

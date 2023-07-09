@@ -127,3 +127,97 @@ textarea
   &__footer-box:first-child
     display: flex
     column-gap: 26px
+
+.log-in-form
+  max-width: 667px
+  margin: 0 auto
+
+  &__wrap
+    margin-bottom: 10px
+    position: relative
+    .icon--check
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 0
+      width: 20px
+      height: 20px
+      fill: $black
+
+  &__wrap:nth-child(4)
+    margin-bottom: 44px
+
+  &__wrap
+    .show-btn
+      cursor: pointer
+      user-select: none
+      .icon--eye
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        width: 20px
+        height: 20px
+        transition: all 0.3s ease
+        opacity: 0
+        visibility: hidden
+      .icon--eye-slash
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        width: 20px
+        height: 20px
+        transition: all 0.3s ease
+    .show-btn.active
+      .icon--eye
+        opacity: 1
+        visibility: visible
+      .icon--eye-slash
+        opacity: 0
+        visibility: hidden
+
+  &__input
+    color: $black
+    font-weight: 500
+    font-size: 25px
+    border: none
+    border-bottom: 3px solid #FF4F00
+    background: transparent
+    padding-right: 30px
+    &::placeholder
+      color: $black
+      font-weight: 500
+      font-size: 25px
+    &:focus
+      border-color: #51ff34
+      ~.icon--check
+        fill: #51ff34
+
+  &__descr
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 32px
+    .icon--check
+      width: 20px
+      height: 20px
+      fill: $black
+    span
+      font-weight: 500
+      font-size: 25px
+      color: $black
+      margin-left: 11px
+
+  &-submit
+    background: $accent-grnt
+    border: none
+    color: $white
+    font-weight: 700
+    font-size: 18px
+    line-height: 110%
+    border-radius: 10px
+    padding: 20px 32px
+    transition: all 0.3s ease
+    &:hover
+      color: darken($white, 10%)

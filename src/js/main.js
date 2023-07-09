@@ -280,3 +280,21 @@ if (localStorage.getItem('choose-news')) {
   $('.choose-news__content-delete').remove();
   chooseForm.show();
 }
+
+const showPassword = () => {
+  const showBtn = $('.show-btn');
+  const passInput = $('.password-input');
+
+  showBtn.on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+
+    if ($(this).parent().find(passInput).attr('type') === 'password') {
+      $(this).parent().find(passInput).attr('type', 'text');
+    } else {
+      $(this).parent().find(passInput).attr('type', 'password');
+    }
+  });
+};
+
+showPassword();

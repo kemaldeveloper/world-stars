@@ -1,7 +1,8 @@
 .card-screen
-  background: url(../assets/images/bg/football-bg.png) center center/cover no-repeat
-  // min-height: 100vh
-  max-height: 958px
+  background: url(../assets/images/bg/football-bg.png)
+  background-repeat: no-repeat
+  background-position: top
+  background-size: 100% 958px
   padding-top: 224px
   position: relative
 
@@ -10,7 +11,7 @@
   &__video
     position: relative
     z-index: 1
-    top: 224px
+    // top: 224px
 
   &__video-content
     background: $accent-grnt
@@ -83,9 +84,9 @@
   &__img
     img:nth-child(1)
       position: absolute
-      bottom: -207px
+      bottom: -20px
       left: 0
     img:nth-child(2)
       position: absolute
-      bottom: -220px
+      bottom: -20px
       right: 0

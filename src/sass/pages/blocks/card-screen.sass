@@ -1,0 +1,91 @@
+.card-screen
+  background: url(../assets/images/bg/football-bg.png) center center/cover no-repeat
+  // min-height: 100vh
+  max-height: 958px
+  padding-top: 224px
+  position: relative
+
+  &__content
+
+  &__video
+    position: relative
+    z-index: 1
+    top: 224px
+
+  &__video-content
+    background: $accent-grnt
+    border-radius: 15px
+
+  &__video-header
+
+  &__video-preview
+    background: url(../assets/images/sport-news-card/video-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    width: 100%
+    min-height: 648px
+    border-radius: 15px
+    padding: 90px 15px 15px 81px
+    position: relative
+
+  &__video-category
+    p
+      font-weight: 400
+      font-size: 30px
+      line-height: 130%
+      color: $white
+
+  &__video-name
+    p
+      font-weight: 400
+      font-size: 85px
+      line-height: 130%
+      color: $white
+
+  &__video-link
+    position: absolute
+    top: 60%
+    left: 50%
+    transform: translate(-50%, -60%)
+
+  &__video-body
+    display: flex
+    justify-content: space-between
+    padding: 32px 86px 50px 60px
+
+  &__video-descr
+    max-width: 466px
+    p
+      font-weight: 400
+      font-size: 24px
+      line-height: 120%
+      color: $white
+      margin-bottom: 0
+
+  &__video-footer
+    display: flex
+    justify-content: space-between
+    margin-top: 33px
+
+  &__video-author
+    span
+      font-weight: 700
+      font-size: 20px
+      color: $grey
+
+  &__video-view
+    span
+      font-weight: 700
+      font-size: 20px
+      color: $grey
+
+  &__img
+    img:nth-child(1)
+      position: absolute
+      bottom: -207px
+      left: 0
+    img:nth-child(2)
+      position: absolute
+      bottom: -220px
+      right: 0

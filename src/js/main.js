@@ -2,6 +2,7 @@
 
 // Breakpoints
 const breakpoints = {
+  xxl: 1440,
   xl: 1200,
   lg: 992,
   md: 768,
@@ -144,16 +145,16 @@ const mfpPopup = function (popupID, source) {
 const topSLiderEl = $('.top-slider__slide').clone();
 
 const topSlider = new Swiper('.top-slider', {
-  slidesPerView: 'auto',
+  // slidesPerView: 10,
   simulateTouch: true,
   spaceBetween: 15,
   loop: true,
   loopedSlides: 10,
   speed: 500,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     prevEl: '.top-slider-prev',
     nextEl: '.top-slider-next',
@@ -161,6 +162,14 @@ const topSlider = new Swiper('.top-slider', {
   on: {
     beforeInit: function () {
       $('.top-slider__wrapper').append(topSLiderEl);
+    },
+  },
+  breakpoints: {
+    1440: {
+      slidesPerView: 10,
+    },
+    1200: {
+      slidesPerView: 8,
     },
   },
 });

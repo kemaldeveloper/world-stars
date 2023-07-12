@@ -1,38 +1,77 @@
 .header
   padding: 78px 0 15px
+  +lg
+    padding-top: 55px
+  +sm
+    padding-top: 15px
 
   .logo
     display: inline-block
     width: 243px
     height: 73px
-
+    +lg
+      width: 180px
+      height: 50px
+    +md
+      width: 130px
+      height: 40px
+    +sm
+      width: 100px
+      height: 30px
     .icon--logo
+      width: inherit
+      height: inherit
       fill: $black
 
   &__content
     display: flex
     justify-content: space-between
+    align-items: center
 
   &__actions
     display: flex
     align-items: center
 
   &__search
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 24px
+    height: 24px
     margin-right: 14px
+    +md
+      width: 20px
+      height: 22px
+    +sm
+      width: 15px
+      height: 15px
+      margin-right: 10px
 
     .icon--search
-      width: 24px
-      height: 24px
+      width: 100%
+      height: 100%
 
   &__notice
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 22px
+    height: 24px
     margin-right: 26px
     position: relative
+    +md
+      width: 18px
+      height: 22px
+    +sm
+      width: 15px
+      height: 15px
+      margin-right: 10px
 
     .icon--notice
       position: relative
-      width: 22px
-      height: 24px
       z-index: 1
+      width: 100%
+      height: 100%
 
     span
       position: absolute
@@ -54,16 +93,28 @@
   &__profile
     display: flex
     align-items: center
+    justify-content: center
 
     .icon--arrow
       width: 15px
       height: 10px
+      +sm
+        width: 7px
+        height: 7px
 
   &__profile-img
+    display: flex
+    justify-content: center
+    align-items: center
     width: 38px
     height: 38px
     border-radius: 50%
     margin-right: 15px
+    background: rgba(0, 0, 0, 0.1)
+    +sm
+      width: 20px
+      height: 20px
+      margin-right: 5px
     img
       width: 100%
       height: 100%
@@ -74,6 +125,12 @@
     line-height: 130%
     color: $black
     margin-right: 15px
+    white-space: nowrap
+    +md
+      font-size: 18px
+      margin-right: 7px
+    +sm
+      font-size: 12px
 
 .wrapper.black-header
   .header

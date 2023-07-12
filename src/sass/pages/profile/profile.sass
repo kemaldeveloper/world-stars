@@ -1,0 +1,120 @@
+.profile
+    margin-top: 139px
+    &-title
+        font-size: 64px
+        font-style: normal
+        font-weight: 400
+        line-height: 130%
+        margin-bottom: 167px
+
+    &-body
+        display: grid
+        grid-template-columns: 307px 1fr
+        column-gap: 80px
+        .profile-nav-left
+            .profile-img
+                border-radius: 10px
+                max-width: 307px
+                width: 100%
+        .profile-user-data
+            .select-required
+                margin-top: 25px
+            .choices:has(.mr-8)
+                margin-right: 8px
+
+            .profile-required
+                display: flex
+                width: 35px
+                height: 35px
+                border-radius: 50%
+                border: 1px solid $black
+
+            .profile-required-active
+                border: none
+                background: $accent-grnt
+
+            .main-select
+                .choices__inner
+                    min-height: 37px
+                    height: 37px
+                    display: flex
+                    align-items: center
+            .switch
+                flex-wrap: wrap
+                display: flex
+                gap: 10px
+            .switch-3
+                max-width: 400px
+            .user-data-top
+                display: grid
+                grid-template-columns: 1fr 183px
+                column-gap: 80px
+
+                .select-required
+                    width: 100%
+                    display: grid
+                    grid-template-columns: 147px 35px 1fr
+                    column-gap: 23px
+                    align-items: start
+                    .select-title
+                        font-size: 14px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 24px
+
+                .data-right
+                    .data-filling-percentage
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 170px
+                        height: 170px
+                        border-radius: 50%
+                        border: 6px solid #FFFFFF
+                        .num
+                            font-size: 48px
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 130%
+                    .personal-information,
+                    .data-filing-info
+                        display: block
+                        text-align: center
+                    .data-filing-info
+                        font-size: 14px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 120%
+                        margin-top: 18px
+                        margin-bottom: 35px
+                    .personal-information
+                        font-size: 12px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 120%
+                        margin-top: 15px
+                .data-left
+                    display: flex
+                    flex-direction: column
+                    .username
+                        font-size: 30px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: normal
+                        margin-bottom: 120px
+            .user-data-bottom
+                .select-required
+                    display: grid
+                    grid-template-columns: 147px 35px 1fr
+                    column-gap: 23px
+                    align-items: start
+                .select-required-long
+                    grid-template-columns: 205px 1fr
+                .warrning
+                    margin-top: 20px
+                    display: flex
+                    justify-content: start
+                    align-items: center
+                    .profile-required
+                        margin-left: 10px
+                        margin-right: 10px

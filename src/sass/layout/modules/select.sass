@@ -169,3 +169,58 @@
   border: 1px solid $black
   border-top-width: 0
   border-radius: 0 0 14px 14px
+
+  /*==============================Main-Select=================================*/ 
+
+.main-select
+  display: flex
+  .choices
+    margin-bottom: 0
+  .choices__inner
+    z-index: 1
+    padding: 8px 25px 8px 20px
+    background: transparent
+    border-radius: 10px
+    border: 1px solid #000
+    &::after
+      left: 0
+      top: 0
+      content: ''
+      background: $accent-grnt
+      width: 100%
+      height: 100%
+      position: absolute
+      display: none
+      z-index: -1
+    .choices__item
+      font-size: 14px
+      font-style: normal
+      font-weight: 700
+      line-height: 24px
+      padding-right: 2px
+
+  .choices::after
+    border-color: $black
+    right: 17.5px
+
+  .is-open
+    &::after
+      top: 50%
+      border-color: $white
+
+  .is-open
+    .choices__inner
+      position: relative
+      border-radius: 10px 10px 0px 0px
+      border: 1px solid transparent
+      .choices__item
+        color: $white
+      &::after
+        display: flex
+  .is-flipped
+    .choices__inner
+      border-radius: 0px 0px 10px 10px
+
+  /*==============================Profile-Select=================================*/ 
+  // Страница 1
+  // 

@@ -283,36 +283,33 @@
         </label>
       </div>
       <div class="choose-form__footer">
-        <div class="choose-form__footer-wrap">
-          <div class="choose-form__footer-box">
-            <span class="choose-form__submit-descr">Подтверди свой выбор</span>
-            <button class="submit" type="submit">
-              <span>Подтвердить</span>
-              <div class="circle">
-                <svg class="icon icon--submit"><use xlink:href="assets/svg-sprite.svg#submit"></use></svg>
-              </div>
-            </button>
-            <div class="pagination">
-              <span class="pagination__descr">Страница</span>
-              <span class="pagination__current-page">1</span>
-              <span class="pagination__page-of">из</span>
-              <span class="pagination__last-page">300</span>
-              <div class="pagination__btns">
-                <a href="#" class="pagination-prev">
-                  <svg class="icon icon--pagination-arrow">
-                    <use xlink:href="assets/svg-sprite.svg#pagination-arrow"></use>
-                  </svg>
-                </a>
-                <a href="#" class="pagination-next">
-                  <svg class="icon icon--pagination-arrow">
-                    <use xlink:href="assets/svg-sprite.svg#pagination-arrow"></use>
-                  </svg>
-                </a>
-              </div>
+        <div class="choose-form__footer-content">
+          <span class="choose-form__submit-descr">Подтверди свой выбор</span>
+          <button class="submit" type="submit">
+            <span>Подтвердить</span>
+            <div class="circle">
+              <svg class="icon icon--submit"><use xlink:href="assets/svg-sprite.svg#submit"></use></svg>
+            </div>
+          </button>
+          <div class="pagination">
+            <span class="pagination__descr">Страница</span>
+            <span class="pagination__current-page">1</span>
+            <span class="pagination__page-of">из</span>
+            <span class="pagination__last-page">300</span>
+            <div class="pagination__btns">
+              <a href="#" class="pagination-prev">
+                <svg class="icon icon--pagination-arrow">
+                  <use xlink:href="assets/svg-sprite.svg#pagination-arrow"></use>
+                </svg>
+              </a>
+              <a href="#" class="pagination-next">
+                <svg class="icon icon--pagination-arrow">
+                  <use xlink:href="assets/svg-sprite.svg#pagination-arrow"></use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-        <div class="choose-form__footer-wrap"></div>
       </div>
     </form>
   </div>
@@ -418,13 +415,13 @@
   <section class="interesting">
   <div class="container">
     <div class="interesting__content">
-      <div class="interesting__img">
-        <img style="width: 577px; height: 519px" src="assets/images/music-news/play.png" alt="" />
-      </div>
       <div class="interesting__body">
         <h3 class="interesting__title">Это интересно</h3>
         <div class="video">
-          <a href="https://youtu.be/6BTmk4i5Vl0" class="video__link" data-fancybox>
+          <div class="video__preview-img">
+            <img src="assets/images/blocks/video-bg.jpg" alt="" />
+          </div>
+          <a href="https://youtu.be/aDxIp_bCDBA" class="video__link" data-fancybox>
             <svg class="icon icon--video-play"><use xlink:href="assets/svg-sprite.svg#video-play"></use></svg>
           </a>
         </div>

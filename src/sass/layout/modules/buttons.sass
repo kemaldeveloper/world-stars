@@ -170,3 +170,30 @@
   display: block
   padding: 28.66px 138.3px 24.59px 122.33px
   white-space: nowrap
+
+.white-btn
+  display: inline-block
+  white-space: nowrap
+  font-weight: 700
+  font-size: 20px
+  background: $white
+  border-radius: 12px
+  padding: 25px 55px
+  color: $black
+  &:hover
+    color: lighten($black, 15%)
+
+.circled-btn
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 99px
+  height: 99px
+  border-radius: 50%
+  border: 1px solid $black
+  cursor: pointer
+  user-select: none
+  svg
+    width: 54px
+    height: 11px
+    fill: $black

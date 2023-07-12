@@ -29,9 +29,9 @@ const MQ = {
 MQ.updateState();
 
 $(document).ready(function () {
-  $('.favourite-btn').on('click', function (event) {
+  $('.choose-form__label-content input').on('click', function (event) {
     $(this).parent().toggleClass('label-active');
-    $(this).toggleClass('fav-active');
+    $(this).parent().find('.favourite-btn').toggleClass('fav-active');
   });
 });
 
@@ -221,6 +221,15 @@ new Swiper('.shop-slider', {
   slidesPerView: 3,
   keyboard: {
     enabled: true,
+  },
+});
+
+new Swiper('.photo-slider', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.photo-next',
+    prevEl: '.photo-prev',
   },
 });
 

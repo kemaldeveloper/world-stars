@@ -1,34 +1,42 @@
+.card-screen.sport-card
+  background-image: url(../assets/images/bg/football-bg.png)
+
 .card-screen
-  background: url(../assets/images/bg/football-bg.png)
+  padding-top: 224px
   background-repeat: no-repeat
   background-position: top
   background-size: 100% 958px
-  padding-top: 224px
   position: relative
 
   &__content
+    position: relative
 
   &__video
     position: relative
     z-index: 1
-    // top: 224px
 
   &__video-content
     background: $accent-grnt
     border-radius: 15px
 
   &__video-header
+    position: relative
+    z-index: 1
+    padding: 90px 0 0 81px
 
   &__video-preview
-    background: url(../assets/images/sport-news-card/video-bg.jpg)
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center center
-    width: 100%
-    min-height: 648px
+    position: absolute
+    top: -1px
+    left: 0
+    right: 0
+    max-height: 648px
     border-radius: 15px
-    padding: 90px 15px 15px 81px
-    position: relative
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 15px
 
   &__video-category
     p
@@ -46,14 +54,14 @@
 
   &__video-link
     position: absolute
-    top: 60%
+    top: 35%
     left: 50%
-    transform: translate(-50%, -60%)
+    transform: translateX(-50%)
 
   &__video-body
     display: flex
     justify-content: space-between
-    padding: 32px 86px 50px 60px
+    padding: 425px 86px 50px 60px
 
   &__video-descr
     max-width: 466px

@@ -1,0 +1,50 @@
+.play
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 162.314px
+  height: 162.314px
+  border: 3px solid $white
+  border-radius: 100%
+  .icon--video-play
+    width: 33px
+    height: 37px
+    fill: $white
+
+.more-link
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  column-gap: 20px
+  font-weight: 700
+  font-size: 20px
+  color: $c3
+  .icon--more-arrow
+    width: 22px
+    height: 11px
+    fill: $c3
+  &:hover
+    color: lighten($c3, 15%)
+    .icon--more-arrow
+      color: lighten($c3, 15%)
+
+.gallery-play
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 50px
+  height: 50px
+  border: 1px solid $white
+  border-radius: 50%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  svg
+    width: 15px
+    height: 20px
+    fill: $white
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    // transform: translate(-50%, -50%)

@@ -191,7 +191,8 @@ const cloningSliderElements = $('.meets__track-item').clone();
 
 new Swiper('.meets__track', {
   loop: true,
-  slidesPerView: 4,
+  slidesPerView: 5,
+  loopedSlides: 5,
   spaceBetween: 30,
   wrapperClass: 'meets__track-wrapper',
   slideClass: 'meets__track-item',
@@ -200,32 +201,27 @@ new Swiper('.meets__track', {
   freeMode: {
     enabled: true,
   },
-  // autoplay: {
-  //   delay: 0,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
   on: {
     beforeInit: function () {
       $('.meets__track-wrapper').append(cloningSliderElements);
     },
   },
-});
+  breakpoints: {
+    1440: {
+      slidesPerView: 5,
+    },
 
-new Swiper('.meets__ribbon', {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  wrapperClass: 'meets__ribbon-wrapper',
-  slideClass: 'meets__ribbon-item',
-  speed: 9500,
-  simulateTouch: false,
-  freeMode: {
-    enabled: true,
+    576: {
+      slidesPerView: 4,
+    },
+    0: {
+      slidesPerView: 3,
+    },
   },
-  // autoplay: {
-  //   delay: 0,
-  //   disableOnInteraction: false,
-  // },
 });
 
 new Swiper('.slider-meets', {

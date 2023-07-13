@@ -50,7 +50,179 @@
       <main class="main">
   <section class="profile">
     <div class="container">
-        <p>Test</p>
+        <h1 class="profile-title">Мой профиль</h1>
+        <div class="profile-body">
+            <div class="profile-nav-left">
+                <img src="assets/images/profile/user-avatar.jpg" alt="user-avatar" class="profile-img">
+            </div>
+            <div class="profile-user-data">
+                <form action="#" method="get">
+                    <div class="user-data-top">
+                        <div class="data-left">
+                            <span class="username">Краштатова Елена</span>
+                            <div class="information-wrapper">
+                                <div class="select-required">
+                                    <span class="select-title">пол:</span>
+                                    <div class="profile-required profile-required-active"></div>
+                                    <div class="main-select">
+                                        <select name="gender" id="gender" class="js-choice">
+                                            <option value="not-select" selected>Не выбран</option>
+                                            <option value="woman">Женщина</option>
+                                            <option value="man">Мужчина</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="select-required">
+                                    <span class="select-title">язык:</span>
+                                    <div class="profile-required"></div>
+                                    <div class="main-select">
+                                        <select name="gender" id="gender" class="js-choice">
+                                            <option value="not-select" selected>Русский</option>
+                                            <option value="man">Не русский</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="select-required">
+                                    <span class="select-title">страна/город:</span>
+                                    <div class="profile-required"></div>
+                                    <div class="main-select">
+                                        <select name="gender" id="gender" class="js-choice mr-8">
+                                            <option value="not-select" selected>Россия</option>
+                                            <option value="man">Не русский</option>
+                                        </select>
+                                        <select name="gender" id="gender" class="js-choice">
+                                            <option value="not-select" selected>Москва</option>
+                                            <option value="man">Не русский</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="select-required">
+                                    <span class="select-title">отношение
+                                        к курению:</span>
+                                    <div></div>
+                                    <div class="main-select">
+                                        <select name="gender" id="gender" class="js-choice">
+                                            <option value="not-select" selected>Иногда</option>
+                                            <option value="woman">Женщина</option>
+                                            <option value="man">Мужчина</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-right">
+                            <div class="data-filling-percentage">
+                                <span class="num">70%</span>
+                            </div>
+                            <span class="data-filing-info">Ваш профиль практически заполнен!</span>
+                            <button type="submit" class="default-orange">Сохранить</button>
+                            <span class="personal-information">соглашаюсь на обработку персональных данных</span>
+                        </div>
+                    </div>
+                    <div class="user-data-bottom">
+                        <div class="select-required select-required-long">
+                            <span class="select-title">ваши любимые
+                                книги:</span>
+                            <div class="main-select">
+                                <select name="gender" id="gender" class="js-choice">
+                                    <option value="not-select" selected>Мертвые души, Мастер и Маргарита</option>
+                                    <option value="man">Не русский</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select-required select-required-long">
+                            <span class="select-title">ваши любимые
+                                книги:</span>
+                            <div class="main-select">
+                                <select name="gender" id="gender" class="js-choice">
+                                    <option value="not-select" selected>Мертвые души, Мастер и Маргарита</option>
+                                    <option value="man">Не русский</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select-required select-required-long">
+                            <span class="select-title">ваши любимые
+                                фильмы:</span>
+                            <div class="main-select">
+                                <select name="gender" id="gender" class="js-choice">
+                                    <option value="not-select" selected>Мертвые души, Мастер и Маргарита</option>
+                                    <option value="man">Не русский</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select-required">
+                            <span class="select-title">что вы любите:</span>
+                            <div class="profile-required profile-required-active"></div>
+                            <!-- Кино -->
+                            <div class="switch">
+                                <label for="switch-1" class="switch-btn">
+                                    Кино
+                                    <input type="radio" name="favorite" value="movie" id="switch-1">
+                                </label>
+                                <label for="switch-2" class="switch-btn">
+                                    Музыка
+                                    <input type="radio" name="favorite" value="music" id="switch-2">
+                                </label>
+                                <label for="switch-3" class="switch-btn">
+                                    Мода
+                                    <input type="radio" name="favorite" value="mode" id="switch-3">
+                                </label>
+                                <label for="switch-4" class="switch-btn">
+                                    Спорт
+                                    <input type="radio" name="favorite" value="sport" id="switch-4">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="select-required">
+                            <span class="select-title">стиль
+                                в одежде:</span>
+                            <div class="profile-required profile-required-active"></div>
+                            <!-- Кино -->
+                            <div class="switch switch-3">
+                                <label for="switch-2-1" class="switch-btn">
+                                    Классика
+                                    <input type="radio" name="style" value="movie" id="switch-2-1">
+                                </label>
+                                <label for="switch-2-2" class="switch-btn">
+                                    Спортивный
+                                    <input type="radio" name="style" value="music" id="switch-2-2">
+                                </label>
+                                <label for="switch-2-3" class="switch-btn">
+                                    Этно
+                                    <input type="radio" name="style" value="mode" id="switch-2-3">
+                                </label>
+                                <label for="switch-2-4" class="switch-btn">
+                                    Современный
+                                    <input type="radio" name="style" value="sport" id="switch-2-4">
+                                </label>
+                                <label for="switch-2-5" class="switch-btn">
+                                    Романтический
+                                    <input type="radio" name="style" value="sport" id="switch-2-5">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="select-required select-required-long">
+                            <span class="select-title">Как близко должен быть ваш знакомый(ая):</span>
+                            <div class="switch">
+                                <label for="switch-3-1" class="switch-btn">
+                                    в ондой стране
+                                    <input type="radio" name="friend" value="movie" id="switch-3-1">
+                                </label>
+                                <label for="switch-3-2" class="switch-btn">
+                                    в ондном городе
+                                    <input type="radio" name="friend" value="music" id="switch-3-2">
+                                </label>
+                                <label for="switch-3-3" class="switch-btn">
+                                    в другой стране
+                                    <input type="radio" name="friend" value="mode" id="switch-3-3">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="warrning">Поля, отмеченные<div class="profile-required profile-required-active"></div> являются обязательными длязаполнения</div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
   <section class="images">

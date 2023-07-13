@@ -142,14 +142,15 @@ const mfpPopup = function (popupID, source) {
 
 // Sliders begin
 
-const topSLiderEl = $('.top-slider__slide').clone();
+// const topSLiderEl = $('.top-slider__slide').clone();
 
 const topSlider = new Swiper('.top-slider', {
-  // slidesPerView: 10,
+  slidesPerView: 10,
+  slidesPerGroup: 3,
   simulateTouch: true,
   spaceBetween: 15,
-  loop: true,
-  loopedSlides: 10,
+  // loop: true,
+  // loopedSlides: 10,
   speed: 500,
   // autoplay: {
   //   delay: 2500,
@@ -159,17 +160,29 @@ const topSlider = new Swiper('.top-slider', {
     prevEl: '.top-slider-prev',
     nextEl: '.top-slider-next',
   },
-  on: {
-    beforeInit: function () {
-      $('.top-slider__wrapper').append(topSLiderEl);
-    },
-  },
+  // on: {
+  //   beforeInit: function () {
+  //     $('.top-slider__wrapper').append(topSLiderEl);
+  //   },
+  // },
   breakpoints: {
-    1440: {
+    // 1440: {
+    //   slidesPerView: 10,
+    // },
+    1200: {
       slidesPerView: 10,
     },
-    1200: {
+    992: {
       slidesPerView: 8,
+    },
+    768: {
+      slidesPerView: 6,
+    },
+    576: {
+      slidesPerView: 4,
+    },
+    0: {
+      slidesPerView: 3,
     },
   },
 });

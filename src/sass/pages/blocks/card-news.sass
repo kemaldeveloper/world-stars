@@ -10,6 +10,14 @@
     line-height: 130%
     color: $black
     margin-bottom: 94px
+    +xl
+      font-size: 48px
+    +lg
+      font-size: 34px
+    +md
+      font-size: 24px
+    +sm
+      font-size: 20px
 
   /* .card-news__content */
 
@@ -23,6 +31,8 @@
   &__col
     display: flex
     justify-content: space-between
+    +md
+      flex-direction: column
 
   /* .card-news__info */
 
@@ -47,6 +57,8 @@
   &__text
     display: flex
     column-gap: 20px
+    +sm
+      flex-direction: column
     p
       font-weight: 400
       font-size: 18px

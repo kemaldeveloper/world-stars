@@ -18,8 +18,14 @@
     background-size: 100% 868px
     // padding-top: 205px
   +xl
+    background-size: 100% 658px
     padding-top: 104px
-    background-size: 100% 868px
+    // background-size: 100% 868px
+  +lg
+    padding-top: 104px
+    background-size: 100% 638px 
+  +md
+    background-size: 100% 528px
 
   &__content
     position: relative
@@ -36,6 +42,10 @@
     position: relative
     z-index: 1
     padding: 90px 0 0 81px
+    +lg
+      padding: 48px 0 0 81px
+    +sm
+      padding: 48px 0 0 20px
 
   &__video-preview
     position: absolute
@@ -45,6 +55,9 @@
     max-height: 648px
     border-radius: 15px
     overflow: hidden
+    +sm
+      height: 100%
+      max-height: 285px
     img
       width: 100%
       height: 100%
@@ -59,6 +72,11 @@
       color: $white
       +xxl
         font-size: 30px
+      +lg
+        font-size: 20px
+      +md
+        margin: 0
+        font-size: 13px
 
   &__video-name
     p
@@ -68,12 +86,26 @@
       color: $white
       +xxl
         font-size: 70px
+      +lg
+        font-size: 47px
+      +md
+        font-size: 26px
 
   &__video-link
     position: absolute
     top: 35%
     left: 50%
     transform: translateX(-50%)
+    +lg
+      top: 23%
+      left: 38%
+      transform: scale(.7) translateX(-0%)
+    +md
+      top: 14%
+      left: 35%
+      transform: scale(.5) translateX(0)
+    +sm
+      left: 25%
 
   &__video-body
     display: flex
@@ -83,15 +115,32 @@
       padding: 386px 86px 50px 60px
     +xl
       padding: 295px 86px 50px 60px
+    +lg
+      padding: 259px 86px 50px 60px
+      align-items: center
+    +md
+      padding: 209px 86px 50px 60px
+      flex-direction: column
+    +sm
+      padding: 208px 20px 50px 20px
 
   &__video-descr
     max-width: 466px
+    +md
+      margin-bottom: 20px
     p
       font-weight: 400
       font-size: 24px
       line-height: 120%
       color: $white
       margin-bottom: 0
+      +lg
+        margin-right: 10px
+        font-size: 20px
+  .white-btn
+    +lg
+      font-size: 16px
+      padding: 22px 37px
 
   &__video-footer
     display: flex
@@ -115,7 +164,15 @@
       position: absolute
       bottom: -20px
       left: 0
+      +xl
+        bottom: -00px
+      +md
+        bottom: 130px
     img:nth-child(2)
       position: absolute
       bottom: -20px
       right: 0
+      +xl
+        bottom: 10px
+      +md
+        bottom: 120px

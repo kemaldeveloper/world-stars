@@ -1,11 +1,15 @@
 .breaking-news
   background: $accent-grnt
   padding-top: 51px
-
+  +md
+    padding-bottom: 51px
   &__content
     display: flex
 
   &__row
+    .white-btn
+      +xl
+        padding: 15px 55px
 
   &__title
     h2
@@ -13,6 +17,12 @@
       font-size: 90px
       line-height: 130%
       color: $white
+      +xl
+        font-size: 50px
+      +lg
+        font-size: 40px
+      +md
+        font-size: 30px
 
   &__descr
     max-width: 422px
@@ -22,10 +32,20 @@
       line-height: 120%
       color: $white
       margin: 5px 0 120px
+      +lg
+        font-size: 16px
+      +md
+        font-size: 18px
+        margin: 5px 0px 30px
 
   &__img
     max-width: 405px
     max-height: 461px
+
+    +xl
+      margin-left: 30px
+    +md
+      display: none
     img
       width: 100%
       height: 100%

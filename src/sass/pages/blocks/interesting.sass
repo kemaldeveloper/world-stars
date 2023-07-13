@@ -1,5 +1,7 @@
 .interesting
   padding-bottom: 150px
+  +md
+    padding-bottom: 70px
 
   &__content
 
@@ -14,6 +16,8 @@
     line-height: 130%
     color: $black
     margin-bottom: 74px
+    +md
+      font-size: 54px
 
 .video
   width: 100%
@@ -23,6 +27,12 @@
   justify-content: center
   align-items: center
   border-radius: 15px
+  +xl
+    height: 515px
+  +lg
+    height: 415px
+  +md
+    height: 295px
 
   &__preview-img
     position: absolute
@@ -49,6 +59,8 @@
     border-radius: 50%
     border: 1px solid $white
     position: relative
+    +md
+      transform: scale(.7)
 
     .icon--video-play
       position: absolute

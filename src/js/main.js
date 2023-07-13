@@ -191,7 +191,7 @@ const cloningSliderElements = $('.meets__track-item').clone();
 
 new Swiper('.meets__track', {
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: 4,
   spaceBetween: 30,
   wrapperClass: 'meets__track-wrapper',
   slideClass: 'meets__track-item',
@@ -200,10 +200,10 @@ new Swiper('.meets__track', {
   freeMode: {
     enabled: true,
   },
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 0,
+  //   disableOnInteraction: false,
+  // },
   on: {
     beforeInit: function () {
       $('.meets__track-wrapper').append(cloningSliderElements);
@@ -222,10 +222,10 @@ new Swiper('.meets__ribbon', {
   freeMode: {
     enabled: true,
   },
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 0,
+  //   disableOnInteraction: false,
+  // },
 });
 
 new Swiper('.slider-meets', {
@@ -235,6 +235,14 @@ new Swiper('.slider-meets', {
   keyboard: {
     enabled: true,
     onlyOnViewport: true,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    },
   },
 });
 

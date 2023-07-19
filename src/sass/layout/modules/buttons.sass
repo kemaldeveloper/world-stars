@@ -84,13 +84,26 @@
 .filter-btn
   font-weight: 400
   font-size: 20px
+  line-height: 100%
   color: $black
   border-radius: 5px
   border: 1px solid $black
   background: transparent
   position: relative
   z-index: 1
-  padding: 11px 24px
+  padding: 18px 24px
+  +xl
+    padding: 5px 15px
+  +lg
+    font-size: 18px
+    padding: 11.5px 15px
+  +md
+    font-size: 14px
+  +sm
+    padding: 6px 10px
+  +xsm
+    font-size: 12px
+    padding: 4px 5px
   &::after
     content: ''
     position: absolute
@@ -106,19 +119,22 @@
     opacity: 0
     visibility: hidden
   &:hover
-    border: none
-    padding: 12px 25px
+    border-color: transparent
     color: $white
     &::after
       opacity: 1
       visibility: visible
 
+.filter-btn.active
+  background: $accent-grnt
+  border-color: $white
+  color: $white
+
 .submit
   display: flex
   justify-content: center
   align-items: center
-  width: 293px
-  height: 59px
+  padding: 12.5px 47px
   background: $accent-grnt
   border: none
   border-radius: 10px
@@ -127,17 +143,32 @@
   line-height: 120%
   color: $white
   column-gap: 21px
+  height: fit-content
+  transition: all 0.3s ease
   .circle
-    display: flex
-    justify-content: center
-    align-items: center
+    position: relative
+    // display: flex
+    // justify-content: center
+    // align-items: center
     width: 34.15px
     height: 34.15px
     +border(50%, 1px, $white)
+    transition: all 0.3s ease
   .icon--submit
     width: 18px
     height: 14px
     fill: $white
+    transition: all 0.3s ease
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &:hover
+    // transform: scale(1.01)
+    .circle
+      transform: scale(1.1)
+    .icon--submit
+      transform: translate(-50%, -50%) scale(1.1)
 
 .favourite-btn
   border: none
@@ -146,12 +177,18 @@
   bottom: 13px
   right: 11px
   z-index: 1
+  +xsm
+    bottom: 8px
+    right: 9px
   span
     color: $accent-grnt
   .icon--star
     width: 29px
     height: 29px
     fill: $white
+    +xsm
+      width: 20px
+      height: 20px
 
 .favourite-btn
   &.fav-active
@@ -211,7 +248,15 @@
   border: 1px solid $black
   cursor: pointer
   user-select: none
+  +xl
+    width: 80px
+    height: 80px
+  +sm
+    width: 70px
+    height: 70px
   svg
     width: 54px
     height: 11px
     fill: $black
+    +xl
+      width: 40px

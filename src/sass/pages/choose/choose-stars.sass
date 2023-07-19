@@ -1,5 +1,12 @@
 .choose-stars
   padding: 141px 0 91px
+  +xl
+    padding-top: 75px
+  +md
+    padding-top: 50px
+  +sm
+    padding-top: 30px
+    padding-bottom: 40px
 
   &__content
 
@@ -7,6 +14,8 @@
     display: flex
     flex-direction: column
     align-items: flex-end
+    +sm
+      align-items: center
 
   &__images-top
     display: flex
@@ -16,6 +25,18 @@
     .choose-stars__img:nth-child(1)
       width: 384px
       height: 181px
+      +lg
+        width: 320px
+        height: 150px
+      +md
+        width: 250px
+        height: 120px
+      +sm
+        width: 208px
+        height: 100px
+      +xsm
+        width: 168px
+        height: 80px
       img
         width: 100%
         height: 100%
@@ -25,6 +46,18 @@
     .choose-stars__img:nth-child(2)
       width: 183px
       height: 181px
+      +lg
+        width: 150px
+        height: 150px
+      +md
+        width: 120px
+        height: 120px
+      +sm
+        width: 100px
+        height: 100px
+      +xsm
+        width: 80px
+        height: 80px
       img
         width: 100%
         height: 100%
@@ -42,6 +75,18 @@
     .choose-stars__img
       flex: 0 0 385px
       height: 368px
+      +lg
+        flex: 0 0 340px
+        height: 325px
+      +md
+        flex: 0 0 280px
+        height: 270px
+      +sm
+        flex: 0 0 210px
+        height: 200px
+      +xsm
+        flex: 0 0 150px
+        height: 144px
       img
         width: 100%
         height: 100%
@@ -52,5 +97,16 @@
     font-weight: 400
     font-size: 90px
     line-height: 120%
-    // max-width: 740px
     display: inline-block
+    +xxl
+      font-size: 75px
+    +xl
+      font-size: 60px
+    +lg
+      font-size: 37px
+    +md
+      font-size: 25px
+    +sm
+      font-size: 16px
+    +xsm
+      font-size: 14px

@@ -15,11 +15,17 @@
 
   &__title
     margin-bottom: 72px
+    +sm
+      margin-bottom: 30px
     h4
       font-weight: 400
       font-size: 40px
       line-height: 130%
       margin-bottom: 0
+      +sm
+        font-size: 30px
+      +xsm
+        font-size: 20px
 
   &__container
     display: grid
@@ -44,7 +50,7 @@
       row-gap: 174px
       grid-template-columns: repeat(3 , 1fr)
       grid-template-rows: repeat(4, 1fr)
-      grid-auto-rows: 106px
+      grid-auto-rows: 1fr
       row-gap: 24px
 
   &__item
@@ -73,6 +79,8 @@
 
   &__title
     margin-bottom: 80px
+    +sm
+      margin-bottom: 25px
 
   &__content
 
@@ -85,17 +93,19 @@
 
   &-item
     display: grid
-    grid-template-columns: 1fr 390px
-    grid-template-rows: 395px 395px
+    grid-template: 395px 395px / 1fr 390px
     column-gap: 20px
     row-gap: 11px
+    +xxl
+      grid-template-rows: repeat(2, 300px)
+    +lg
+      grid-template: repeat(2, 240px) / 1fr 335px
     +md
-      grid-template-columns: 1fr 280px
-      grid-template-rows: 235px 275px
+      grid-template: repeat(2, 200px) / 1fr 245px
     +sm
-      grid-template-columns: 1fr 280px
-      grid-template-rows: 235px 275px
-
+      grid-template: repeat(2, 160px) / 1fr 1fr
+    +xsm
+      grid-template-rows: repeat(2, 115px)
   &-img
     border-radius: 15px
     img
@@ -115,3 +125,10 @@
     justify-content: center
     align-items: center
     column-gap: 190px
+    +xl
+      column-gap: 130px
+    +md
+      column-gap: 70px
+    +sm
+      justify-content: space-between
+      align-self: auto

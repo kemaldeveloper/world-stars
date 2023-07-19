@@ -2,7 +2,6 @@
 
 // Breakpoints
 const breakpoints = {
-  xxl: 1440,
   xl: 1200,
   lg: 992,
   md: 768,
@@ -30,10 +29,23 @@ const MQ = {
 MQ.updateState();
 
 $(document).ready(function () {
-  $('.choose-form__label-content input').on('click', function (event) {
-    $(this).parent().toggleClass('label-active');
-    $(this).parent().find('.favourite-btn').toggleClass('fav-active');
-  });
+  const checkboxInput = $('.choose-form__label-content input[type=checkbox]');
+  function favoriteStarsSwitcher() {
+    checkboxInput.each((index, item) => {
+      const isChecked = $(item).prop('checked');
+
+      if (isChecked) {
+        $(item).parent().addClass('label-active');
+        $(item).parent().find('.favourite-btn').addClass('fav-active');
+      } else {
+        $(item).parent().removeClass('label-active');
+        $(item).parent().find('.favourite-btn').removeClass('fav-active');
+      }
+    });
+  }
+  favoriteStarsSwitcher();
+
+  checkboxInput.on('change', favoriteStarsSwitcher);
 });
 
 $(window).on('load', function () {});
@@ -59,10 +71,10 @@ $('.js-menu').on('click', function () {
 });
 
 // Phone input mask
-$('input[type="tel"]').inputmask({
-  mask: '+7 (999) 999-99-99',
-  showMaskOnHover: false,
-});
+// $('input[type="tel"]').inputmask({
+//   mask: '+7 (999) 999-99-99',
+//   showMaskOnHover: false,
+// });
 
 // E-mail Ajax Send
 // $('form').on('submit', function (e) {
@@ -263,8 +275,9 @@ new Swiper('.photo-slider', {
 
 const multiSlider = () => {
   const styleSliders = document.querySelectorAll('.style__item');
+
   styleSliders.forEach((item) => {
-    const slider = new Swiper(item.querySelector('.style-slider'), {
+    new Swiper(item.querySelector('.style-slider'), {
       navigation: {
         nextEl: item.querySelector('.style-button-next'),
         prevEl: item.querySelector('.style-button-prev'),
@@ -285,11 +298,14 @@ const multiSelect = () => {
   const selects = document.querySelectorAll('.js-choice');
 
   selects.forEach((item) => {
-    const choices = new Choices(item, {
+    new Choices(item, {
       searchEnabled: false,
       resetScrollPosition: false,
       itemSelectText: '',
       allowHTML: false,
+      classNames: {
+        flippedState: '',
+      },
     });
   });
 };
@@ -333,3 +349,14 @@ const showPassword = () => {
 };
 
 showPassword();
+
+const filterBtnParent = $('.js-filters');
+
+filterBtnParent.each((index, item) => {
+  const filterBtn = $(item).find('.filter-btn');
+
+  filterBtn.on('click', function () {
+    filterBtn.removeClass('active');
+    $(this).addClass('active');
+  });
+});

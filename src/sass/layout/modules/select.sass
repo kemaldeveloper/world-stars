@@ -2,6 +2,13 @@
 .sport-select .choices
   font-family: $deff
   width: 152px
+  z-index: 10
+  +lg
+    width: 130px
+  +md
+    width: 110px
+  +xsm
+    width: 97px
 
 .sport-select .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
   overflow-y: auto
@@ -13,17 +20,32 @@
   color: $white
   border: none
   padding: 8.5px 8.5px
+  +xl
+    padding: 12.5px 5.5px
+  +md
+    padding: 11px 5.5px
+  +sm
+    padding: 7px 5.5px
   &::after
     opacity: 1
     visibility: visible
 
 .sport-select .choices__inner
-  padding: 7.5px 7.5px
+  padding: 13.5px 7.5px
   border: 1px solid #000
   border-radius: 5px
   position: relative
-  z-index: 1
-  // transition: all 0.3s ease
+  z-index: 10
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 0
+  +xl
+    padding: 11.5px 4.5px
+  +md
+    padding-top: 10px
+  +sm
+    padding-top: 6px
   &::after
     content: ''
     position: absolute
@@ -38,9 +60,27 @@
     opacity: 0
     visibility: hidden
 
+.choices[data-type*=select-one] .choices__inner
+  padding-bottom: 14.5px
+  +xl
+    padding-bottom: 11.5px
+  +md
+    padding-bottom: 10px
+  +sm
+    padding-bottom: 6px
+
 .sport-select .choices__list--single
   font-weight: 400
   font-size: 20px
+  line-height: 100%
+  +xl
+    padding: 0 16px 0 0
+  +lg
+    font-size: 18px
+  +md
+    font-size: 14px
+  +xsm
+    font-size: 12px
 
 .choices[data-type*=select-one]::after
   content: ''
@@ -52,6 +92,10 @@
   z-index: 1
   transform: rotate(-45deg)
   transition: all 0.3s ease
+  +xsm
+    width: 6px
+    height: 6px
+    top: 47%
 
 .choices[data-type*=select-one].is-open::after
   margin: 0
@@ -68,6 +112,22 @@
   font-family: $deff
   font-weight: 400
   font-size: 16px
+  +md
+    font-size: 14px
+
+.sport-select .choices__list--dropdown
+  top: calc( 100% - 30px )
+  padding-top: 30px
+  max-height: 250px
+  overflow: auto
+
+.sport-select .choices__list--dropdown::-webkit-scrollbar
+  width: 0
+
+.sport-select .choices__list--dropdown.is-active
+  border: 1px solid $black
+  border-top-width: 0
+  border-radius: 0 0 14px 14px
 /*==============================Sport-Select=================================*/ 
 
 /*==============================Sorting-Select=================================*/ 
@@ -115,6 +175,7 @@
     visibility: visible
 /*==============================Sorting-Select=================================*/ 
 
+/*==============================Style-Select=================================*/ 
 .style-select .choices
   font-family: $deff
   width: 338px
@@ -141,7 +202,7 @@
     visibility: hidden
     z-index: -1
 
-.style-select .choices[data-type*=select-one]::after
+.choices[data-type*=select-one]::after
   z-index: 11
 
 .style-select .is-open .choices__inner
@@ -223,4 +284,3 @@
 
   /*==============================Profile-Select=================================*/ 
   // Страница 1
-  // 

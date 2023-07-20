@@ -119,11 +119,14 @@
     opacity: 0
     visibility: hidden
   &:hover
-    border-color: transparent
-    color: $white
-    &::after
-      opacity: 1
-      visibility: visible
+    +min_md
+      border-color: transparent
+      color: $white
+      &::after
+        opacity: 1
+        visibility: visible
+    +md
+      color: $black
 
 .filter-btn.active
   background: $accent-grnt
@@ -145,26 +148,25 @@
   column-gap: 21px
   height: fit-content
   transition: all 0.3s ease
+  +md
+    padding: 10px 30px
+    font-size: 18px
   .circle
     position: relative
-    // display: flex
-    // justify-content: center
-    // align-items: center
     width: 34.15px
     height: 34.15px
     +border(50%, 1px, $white)
     transition: all 0.3s ease
   .icon--submit
-    width: 18px
-    height: 14px
-    fill: $white
-    transition: all 0.3s ease
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    width: 18px
+    height: 14px
+    fill: $white
+    transition: all 0.3s ease
   &:hover
-    // transform: scale(1.01)
     .circle
       transform: scale(1.1)
     .icon--submit

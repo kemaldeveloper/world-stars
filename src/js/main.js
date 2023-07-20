@@ -360,3 +360,8 @@ filterBtnParent.each((index, item) => {
     $(this).addClass('active');
   });
 });
+
+const sound = $('.sound')[0];
+$('.submit').hover((e) => {
+  sound.play();
+});

@@ -114,12 +114,21 @@
   font-size: 16px
   +md
     font-size: 14px
+  +sm
+    font-size: 12px
 
 .sport-select .choices__list--dropdown
   top: calc( 100% - 30px )
   padding-top: 30px
   max-height: 250px
   overflow: auto
+  +sm
+    top: calc( 100% - 24px )
+    padding-top: 24px
+
+.sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  +sm
+    padding: 7px
 
 .sport-select .choices__list--dropdown::-webkit-scrollbar
   width: 0

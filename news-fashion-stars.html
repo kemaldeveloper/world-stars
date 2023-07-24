@@ -53,7 +53,7 @@
     <div class="stars-news__content">
       <div class="stars-news__header">
         <div class="row">
-          <div class="col-12 d-flex justify-content-between mb-5">
+          <div class="col-12 mb-sm-5 mb-3">
             <nav class="breadcrumbs">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -71,21 +71,11 @@
               </ul>
             </nav>
           </div>
-          <div class="col-12">
-            <div class="stars-news__country-filter">
-              <button class="filter-btn">Бразилия</button>
-              <button class="filter-btn">Россия</button>
-              <button class="filter-btn">Индия</button>
-              <button class="filter-btn">Китай</button>
-              <button class="filter-btn">ЮАР</button>
-              <button class="filter-btn">Другие</button>
-            </div>
-          </div>
         </div>
       </div>
       <div class="star-news__body body-news">
         <div class="row">
-          <div class="col-12 mb-5">
+          <div class="col-12 mb-md-5 mb-3">
             <div class="body-news__box">
               <div class="body-news__box-item">
                 <h1 class="body-news__title">Мировые звезды моды</h1>
@@ -102,9 +92,7 @@
           </div>
           <div class="col-12">
             <div class="body-news__box">
-              <div class="body-news__adv-img">
-                <img style="width: 202px; height: 226px" src="assets/images/movie-news/clapperboard.png" alt="" />
-              </div>
+              <div class="body-news__adv-img"></div>
               <div class="body-news__box-images">
                 <div class="body-news__img">
                   <img src="assets/images/sport-news/sport-news-2.jpg" alt="sport-stars-img" />
@@ -123,59 +111,41 @@
       <div class="star-news__footer"></div>
     </div>
   </div>
-  <!-- <img class="stars-news-banner" src="assets/images/sport-news/sport-banner-1.svg" /> -->
 </section>
 
 
-  <section class="choose-news" id="choose-news">
+  <section class="choose-news">
   <div class="container">
     <div class="choose-news__content">
-      <div class="choose-news__title">
+      <div class="choose-news__title title">
         <h2>Выбери мировую звезду моды и смотри о ней новости</h2>
-      </div>
-      <div class="choose-news__content-delete">
-        <div class="choose-news__text">
-          <p>Ты можешь добавить новую звезду моды, перейдя на главную страницу “Выбор звезд”</p>
-        </div>
-        <div class="choose-news__content-box">
-          <button class="choose-btn">
-            <span>Выбрать любимые звезды</span>
-            <svg class="icon icon--choose-btn-arrow">
-              <use xlink:href="assets/svg-sprite.svg#choose-btn-arrow"></use>
-            </svg>
-          </button>
-          <div class="choose-news__unchoosed">
-            <span>У тебя не выбраны Мировые Звезды моды!</span>
-          </div>
-        </div>
-        <div class="choose-news__img">
-          <img src="assets/images/choose/congratulations-img.png" alt="" />
-        </div>
       </div>
     </div>
     <form action="#" method="get" class="choose-form" id="choose-form">
-      <div class="choose-form__header">
-        <div class="choose-form__header-wrap">
-          <button type="button" class="filter-btn">Бразилия</button>
-          <button type="button" class="filter-btn">Россия</button>
-          <button type="button" class="filter-btn">Индия</button>
-          <button type="button" class="filter-btn">Китай</button>
-          <button type="button" class="filter-btn">ЮАР</button>
-          <button type="button" class="filter-btn">Другие</button>
+      <div class="row">
+        <div class="col-12 mb-5 d-flex justify-content-lg-between justify-content-center flex-lg-nowrap flex-wrap">
+          <div class="choose-form__header-wrap js-filters mb-lg-0 mb-4">
+            <button type="button" class="filter-btn">Бразилия</button>
+            <button type="button" class="filter-btn">Россия</button>
+            <button type="button" class="filter-btn">Индия</button>
+            <button type="button" class="filter-btn">Китай</button>
+            <button type="button" class="filter-btn">ЮАР</button>
+            <button type="button" class="filter-btn">Другие</button>
+          </div>
+          <label class="choose-form__search-label">
+            <input type="search" class="choose-form__search" placeholder="Поиск звезд " />
+            <button type="button">
+              <svg class="icon icon--choose-search-icon">
+                <use xlink:href="assets/svg-sprite.svg#choose-search-icon"></use>
+              </svg>
+            </button>
+          </label>
         </div>
-        <label class="choose-form__search-label">
-          <input type="search" class="choose-form__search" placeholder="Поиск звезд " />
-          <button type="button">
-            <svg class="icon icon--choose-search-icon">
-              <use xlink:href="assets/svg-sprite.svg#choose-search-icon"></use>
-            </svg>
-          </button>
-        </label>
       </div>
       <div class="choose-form__body">
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-1" />
+            <input type="checkbox" name="img-1" />
             <img src="assets/images/choose/checkbox-img-1.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -184,7 +154,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-2" />
+            <input type="checkbox" name="img-2" />
             <img src="assets/images/choose/choose-stars-img-3.jpg" alt="" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -193,7 +163,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-3" />
+            <input type="checkbox" name="img-3" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -202,7 +172,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-4" />
+            <input type="checkbox" name="img-4" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -211,7 +181,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-5" />
+            <input type="checkbox" name="img-5" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -220,7 +190,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-6" />
+            <input type="checkbox" name="img-6" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -229,7 +199,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-7" />
+            <input type="checkbox" name="img-7" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -238,7 +208,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-8" />
+            <input type="checkbox" name="img-8" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -247,7 +217,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-9" />
+            <input type="checkbox" name="img-9" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -256,7 +226,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-10" />
+            <input type="checkbox" name="img-10" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -265,7 +235,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-11" />
+            <input type="checkbox" name="img-11" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -274,7 +244,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-12" />
+            <input type="checkbox" name="img-12" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -319,7 +289,9 @@
   <section class="news">
   <div class="container">
     <div class="news__content">
-      <h3 class="news__title">Новости</h3>
+      <div class="news__title title">
+        <h3>Новости</h3>
+      </div>
       <ul class="news__list">
         <li class="news__item">
           <div class="news__item-img">
@@ -402,7 +374,7 @@
             <option value="По дате публикации">По дате публикации</option>
           </select>
         </div>
-        <a href="#" class="news__more-link">
+        <a href="#" class="news__more-link more-link">
           <span>Показать больше новостей</span>
           <svg class="icon icon--more-arrow"><use xlink:href="assets/svg-sprite.svg#more-arrow"></use></svg>
         </a>
@@ -672,7 +644,9 @@
   <div class="container">
     <div class="interesting__content">
       <div class="interesting__body">
-        <h3 class="interesting__title">Это интересно</h3>
+        <div class="interesting__title title">
+          <h3>Это интересно</h3>
+        </div>
         <div class="video">
           <div class="video__preview-img">
             <img src="assets/images/blocks/video-bg.jpg" alt="" />
@@ -717,46 +691,6 @@
     </div>
   </div>
 </footer>
-
-<audio class="sound">
-  <source src="assets/audios/congratulations.mp3" />
-</audio>
-
-<!-- Request popup -->
-<div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request">
-  <div class="mfp__title">Оставьте заявку</div>
-  <div class="mfp__desc">менеджер свяжется с Вами в течение 3 часов</div>
-
-  <form class="mfp__form">
-    <div class="input-wrap">
-      <input type="text" name="name" data-name="Имя" placeholder="Имя" />
-    </div>
-    <div class="input-wrap">
-      <input type="tel" name="phone" data-name="Телефон" placeholder="Телефон" required="required" />
-    </div>
-    <div class="input-wrap">
-      <input type="email" name="email" data-name="Почта" placeholder="Почта" />
-    </div>
-    <button class="btn">Send</button>
-
-    <div class="form-result">
-      <div class="mess">
-        <div class="mess__title">Success!</div>
-        <div class="mess__desc">We will contact with you soon</div>
-      </div>
-    </div>
-  </form>
-</div>
-
-<!-- Success popup-->
-<div class="mfp mfp--succes-popup zoom-anim-dialog mfp-hide" id="success">
-  <div class="form-result form-result--success">
-    <div class="mess">
-      <div class="mess__title">Success!</div>
-      <div class="mess__desc">We will contact with you soon</div>
-    </div>
-  </div>
-</div>
 
 <!-- Scripts -->
 <script src="js/libs.min.js"></script>

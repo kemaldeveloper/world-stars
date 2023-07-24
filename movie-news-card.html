@@ -48,7 +48,7 @@
 
 
       <main class="main">
-  <section class="card-screen movie-card">
+  <section class="card-screen" style="background-image: url(assets/images/bg/football-bg.png)">
   <div class="container">
     <div class="card-screen__content">
       <div class="card-screen__video">
@@ -139,7 +139,7 @@
     <div class="card-gallery__content">
       <div class="card-gallery__content-body photo-gallery">
         <div class="photo-gallery__title">
-          <h4>Фотогалерея</h4>
+          <h4>Галерея</h4>
         </div>
 
         <!-- Если хотите добавить изображения в галлерею с низу шаблон для изображения.
@@ -266,7 +266,9 @@
   <div class="container">
     <div class="interesting__content">
       <div class="interesting__body">
-        <h3 class="interesting__title">Это интересно</h3>
+        <div class="interesting__title title">
+          <h3>Это интересно</h3>
+        </div>
         <div class="video">
           <div class="video__preview-img">
             <img src="assets/images/blocks/video-bg.jpg" alt="" />
@@ -332,46 +334,6 @@
     </div>
   </div>
 </footer>
-
-<audio class="sound">
-  <source src="assets/audios/congratulations.mp3" />
-</audio>
-
-<!-- Request popup -->
-<div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request">
-  <div class="mfp__title">Оставьте заявку</div>
-  <div class="mfp__desc">менеджер свяжется с Вами в течение 3 часов</div>
-
-  <form class="mfp__form">
-    <div class="input-wrap">
-      <input type="text" name="name" data-name="Имя" placeholder="Имя" />
-    </div>
-    <div class="input-wrap">
-      <input type="tel" name="phone" data-name="Телефон" placeholder="Телефон" required="required" />
-    </div>
-    <div class="input-wrap">
-      <input type="email" name="email" data-name="Почта" placeholder="Почта" />
-    </div>
-    <button class="btn">Send</button>
-
-    <div class="form-result">
-      <div class="mess">
-        <div class="mess__title">Success!</div>
-        <div class="mess__desc">We will contact with you soon</div>
-      </div>
-    </div>
-  </form>
-</div>
-
-<!-- Success popup-->
-<div class="mfp mfp--succes-popup zoom-anim-dialog mfp-hide" id="success">
-  <div class="form-result form-result--success">
-    <div class="mess">
-      <div class="mess__title">Success!</div>
-      <div class="mess__desc">We will contact with you soon</div>
-    </div>
-  </div>
-</div>
 
 <!-- Scripts -->
 <script src="js/libs.min.js"></script>

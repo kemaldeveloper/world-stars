@@ -3,6 +3,9 @@
   &__list
     display: flex
     column-gap: 20px
+    +sm
+      column-gap: 10px
+      justify-content: space-between
 
   &__item
 
@@ -12,13 +15,25 @@
     align-items: center
     font-weight: 700
     font-size: 20px
+    line-height: 100%
     color: $black
-    padding: 8px 20px
+    padding: 15px 20px
     border: 1px solid $black
     border-radius: 5px
     position: relative
     z-index: 1
     transition: color 0.3s ease
+    +lg
+      padding: 10px 15px
+    +md
+      padding: 8px 13px
+      font-size: 18px
+    +sm
+      padding: 6px 10px
+      font-size: 14px
+    +xsm
+      padding: 5px 8px
+      font-size: 12px
     &::after
       content: ''
       position: absolute
@@ -35,16 +50,14 @@
       visibility: hidden
     &:hover
       color: $white
-      border: none
-      padding: 9px 21px
+      border-color: transparent
       &::after
         opacity: 1
         visibility: visible
 
   &__link.active
     color: $white
-    border: none
-    padding: 9px 21px
+    border-color: transparent
     &::after
       opacity: 1
       visibility: visible

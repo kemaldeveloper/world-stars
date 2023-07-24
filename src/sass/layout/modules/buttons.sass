@@ -92,8 +92,12 @@
   position: relative
   z-index: 1
   padding: 18px 24px
+  border-radius: 5px
+  +xxl
+    padding: 12px 15px
   +xl
-    padding: 5px 15px
+    padding: 10px 10px
+    font-size: 18px
   +lg
     font-size: 18px
     padding: 11.5px 15px
@@ -129,9 +133,11 @@
       color: $black
 
 .filter-btn.active
-  background: $accent-grnt
-  border-color: $white
+  border-color: transparent
   color: $white
+  &::after
+    opacity: 1
+    visibility: visible
 
 .submit
   display: flex
@@ -148,29 +154,37 @@
   column-gap: 21px
   height: fit-content
   transition: all 0.3s ease
+  +xl
+    padding: 10px 40px
+  +lg
+    font-size: 18px
+    padding: 8px 25px
   +md
     padding: 10px 30px
     font-size: 18px
+  +sm
+    max-width: 229px
   .circle
     position: relative
     width: 34.15px
     height: 34.15px
     +border(50%, 1px, $white)
     transition: all 0.3s ease
-  .icon--submit
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 18px
-    height: 14px
-    fill: $white
-    transition: all 0.3s ease
-  &:hover
-    .circle
-      transform: scale(1.1)
+    +lg
+      width: 25px
+      height: 25px
     .icon--submit
-      transform: translate(-50%, -50%) scale(1.1)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 18px
+      height: 14px
+      fill: $white
+      transition: all 0.3s ease
+      +lg
+        width: 12px
+        height: 12px
 
 .favourite-btn
   border: none

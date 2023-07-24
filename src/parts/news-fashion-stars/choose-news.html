@@ -1,52 +1,35 @@
-<section class="choose-news" id="choose-news">
+<section class="choose-news">
   <div class="container">
     <div class="choose-news__content">
-      <div class="choose-news__title">
+      <div class="choose-news__title title">
         <h2>Выбери мировую звезду моды и смотри о ней новости</h2>
-      </div>
-      <div class="choose-news__content-delete">
-        <div class="choose-news__text">
-          <p>Ты можешь добавить новую звезду моды, перейдя на главную страницу “Выбор звезд”</p>
-        </div>
-        <div class="choose-news__content-box">
-          <button class="choose-btn">
-            <span>Выбрать любимые звезды</span>
-            <svg class="icon icon--choose-btn-arrow">
-              <use xlink:href="assets/svg-sprite.svg#choose-btn-arrow"></use>
-            </svg>
-          </button>
-          <div class="choose-news__unchoosed">
-            <span>У тебя не выбраны Мировые Звезды моды!</span>
-          </div>
-        </div>
-        <div class="choose-news__img">
-          <img src="assets/images/choose/congratulations-img.png" alt="" />
-        </div>
       </div>
     </div>
     <form action="#" method="get" class="choose-form" id="choose-form">
-      <div class="choose-form__header">
-        <div class="choose-form__header-wrap">
-          <button type="button" class="filter-btn">Бразилия</button>
-          <button type="button" class="filter-btn">Россия</button>
-          <button type="button" class="filter-btn">Индия</button>
-          <button type="button" class="filter-btn">Китай</button>
-          <button type="button" class="filter-btn">ЮАР</button>
-          <button type="button" class="filter-btn">Другие</button>
+      <div class="row">
+        <div class="col-12 mb-5 d-flex justify-content-lg-between justify-content-center flex-lg-nowrap flex-wrap">
+          <div class="choose-form__header-wrap js-filters mb-lg-0 mb-4">
+            <button type="button" class="filter-btn">Бразилия</button>
+            <button type="button" class="filter-btn">Россия</button>
+            <button type="button" class="filter-btn">Индия</button>
+            <button type="button" class="filter-btn">Китай</button>
+            <button type="button" class="filter-btn">ЮАР</button>
+            <button type="button" class="filter-btn">Другие</button>
+          </div>
+          <label class="choose-form__search-label">
+            <input type="search" class="choose-form__search" placeholder="Поиск звезд " />
+            <button type="button">
+              <svg class="icon icon--choose-search-icon">
+                <use xlink:href="assets/svg-sprite.svg#choose-search-icon"></use>
+              </svg>
+            </button>
+          </label>
         </div>
-        <label class="choose-form__search-label">
-          <input type="search" class="choose-form__search" placeholder="Поиск звезд " />
-          <button type="button">
-            <svg class="icon icon--choose-search-icon">
-              <use xlink:href="assets/svg-sprite.svg#choose-search-icon"></use>
-            </svg>
-          </button>
-        </label>
       </div>
       <div class="choose-form__body">
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-1" />
+            <input type="checkbox" name="img-1" />
             <img src="assets/images/choose/checkbox-img-1.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -55,7 +38,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-2" />
+            <input type="checkbox" name="img-2" />
             <img src="assets/images/choose/choose-stars-img-3.jpg" alt="" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -64,7 +47,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-3" />
+            <input type="checkbox" name="img-3" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -73,7 +56,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-4" />
+            <input type="checkbox" name="img-4" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -82,7 +65,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-5" />
+            <input type="checkbox" name="img-5" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -91,7 +74,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-6" />
+            <input type="checkbox" name="img-6" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -100,7 +83,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-7" />
+            <input type="checkbox" name="img-7" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -109,7 +92,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-8" />
+            <input type="checkbox" name="img-8" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -118,7 +101,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-9" />
+            <input type="checkbox" name="img-9" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -127,7 +110,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-10" />
+            <input type="checkbox" name="img-10" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -136,7 +119,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-11" />
+            <input type="checkbox" name="img-11" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>
@@ -145,7 +128,7 @@
         </label>
         <label class="choose-form__img-label">
           <div class="choose-form__label-content">
-            <input type="checkbox" name="check-img" value="img-12" />
+            <input type="checkbox" name="img-12" />
             <img src="assets/images/choose/checkbox-img-2.jpg" alt="checkbox-img" />
             <div class="favourite-btn">
               <svg class="icon icon--star"><use xlink:href="assets/svg-sprite.svg#star"></use></svg>

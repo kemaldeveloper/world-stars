@@ -55,15 +55,45 @@ a
   font-size: 64px
   line-height: 130%
   color: $black
+  +xxl
+    font-size: 50px
   +lg
     font-size: 40px
   +md
     font-size: 30px
+  +sm
+    font-size: 25px
+  +xsm
+    font-size: 20px
   h1, h2, h3, h4, h5, h6
     font-weight: inherit
     font-size: inherit
     line-height: inherit
     margin-bottom: 0
+
+.more-link
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  column-gap: 20px
+  font-weight: 700
+  font-size: 20px
+  color: $c3
+  +lg
+    font-size: 16px
+  +md
+    font-size: 15px
+    column-gap: 10px
+  +xsm
+    font-size: 12px
+  .icon--more-arrow
+    width: 22px
+    height: 11px
+    fill: $c3
+  &:hover
+    color: lighten($c3, 15%)
+    .icon--more-arrow
+      color: lighten($c3, 15%)
 
 .wrapper
   overflow: hidden

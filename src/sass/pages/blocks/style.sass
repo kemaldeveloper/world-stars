@@ -1,25 +1,50 @@
 .style
 
   &__title
-    font-weight: 400
-    font-size: 64px
-    line-height: 130%
+    display: inline-block
     max-width: 529px
     margin-bottom: 34px
+    +lg
+      max-width: 350px
+    +sm
+      max-width: 220px
 
   &__content
     display: grid
     grid-template-columns: repeat(3, 383px)
     justify-content: space-between
+    +xxl
+      grid-template-columns: repeat(3, 350px)
+    +xl
+      grid-template-columns: repeat(3, 290px)
+    +lg
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 30px
+      grid-template-columns: none
+
+  &__box
+    +lg
+      max-width: 330px
+    +md
+      max-width: 240px
+
+  &__box:nth-child(2)
+    +lg
+      order: 1
 
   &__item
     position: relative
     border-radius: 15px
-    width: 383px
     height: 527px
     background: $white
     padding: 24px 0 0
     user-select: none
+    +xl
+      height: 494px
+    +md
+      height: 409px
 
   &-navigation
     display: flex
@@ -29,8 +54,12 @@
     .swiper-slide
       img
         width: 100%
-        height: 364px
+        height: 354px
         object-fit: contain
+        +xl
+          height: 330px
+        +md
+          height: 270px
 
   &-button-prev
     display: flex
@@ -42,6 +71,9 @@
     border-radius: 0 0 0 15px
     background: $black
     padding-left: 47px
+    +md
+      height: 55px
+      padding-left: 30px
     svg
       fill: $white
       width: 54px
@@ -57,6 +89,9 @@
     border-radius: 0 0 15px 0
     background: $black
     padding-right: 47px
+    +md
+      height: 55px
+      padding-right: 30px
     svg
       width: 53px
       height: 11px
@@ -68,6 +103,10 @@
     line-height: 130%
     text-align: center
     margin-top: 32px
+    +xl
+      font-size: 25px
+    +md
+      font-size: 20px
 
   &__shop
     padding: 129px 0 100px

@@ -26,9 +26,9 @@
     padding: 11px 5.5px
   +sm
     padding: 7px 5.5px
-  &::after
-    opacity: 1
-    visibility: visible
+    &::after
+      opacity: 1
+      visibility: visible
 
 .sport-select .choices__inner
   padding: 13.5px 7.5px
@@ -186,14 +186,11 @@
     visibility: visible
 
 .sorting-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
-  font-family: $deff
-  font-weight: 400
-  font-size: 16px
-  +lg
-    font-size: 12px
-//     font-size: 14px
-//   +sm
-//     font-size: 12px
+  // font-family: $deff
+  // font-weight: 400
+  // font-size: 16px
+  // +lg
+    // font-size: 12px
 
 /*==============================Sorting-Select=================================*/ 
 
@@ -204,12 +201,25 @@
   margin: 0 auto
   z-index: 2
   margin-bottom: 16px
+  +xxl
+    width: 315px
+  +xl
+    width: 260px
+  +lg
+    width: 270px
+  +md
+    width: 195px
 
 .style-select .choices__inner
   border-radius: 14px
   border: 1px solid $black
   position: relative
   z-index: 10
+  padding: 16.5px 24px 16.5px
+  +xl
+    padding: 12px 20px 12px
+  +md
+    padding: 8px 20px 8px 14px
   &::before
     content: ''
     position: absolute
@@ -228,8 +238,7 @@
   z-index: 11
 
 .style-select .is-open .choices__inner
-  border: none
-  padding: 8.5px 8.5px 8.5px
+  border-color: transparent
   &::before
     opacity: 1
     visibility: visible
@@ -240,7 +249,15 @@
 .style-select .choices__item--selectable
   font-weight: 400
   font-size: 18px
-  line-height: 130%
+  line-height: 100%
+  white-space: nowrap
+  +xl
+    font-size: 16px
+  +md
+    font-size: 13px
+
+.style-select .choices__list--single
+  padding: 0
 
 .style-select .choices__list--dropdown
   top: calc( 100% - 30px )
@@ -252,6 +269,16 @@
   border: 1px solid $black
   border-top-width: 0
   border-radius: 0 0 14px 14px
+
+.style-select .choices__item.choices__item--choice.choices__item--selectable
+  font-family: $deff
+  font-weight: 400
+  font-size: 16px
+  padding: 15px
+  +xl
+    font-size: 14px
+  +md
+    font-size: 12px
 
   /*==============================Main-Select=================================*/ 
 

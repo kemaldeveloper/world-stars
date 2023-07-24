@@ -1,5 +1,11 @@
 .history
   padding-bottom: 200px
+  +xxl
+    padding-bottom: 130px
+  +lg
+    padding-bottom: 70px
+  +sm
+    padding-bottom: 40px
 
   &__content
     display: flex
@@ -7,8 +13,24 @@
     padding: 39px 125px 12px 45px
     border-radius: 20px
     background: $blue-grnt
+    +lg
+      padding: 39px 35px 12px 45px
+    +md
+      padding: 30px 30px
+    +sm
+      padding: 15px 15px
+      align-items: center
+    +xsm
+      flex-direction: column
+      justify-content: center
+      row-gap: 20px
 
   &__box
+    +xsm
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
 
   &__title
     font-weight: 700
@@ -17,19 +39,42 @@
     color: $white
     max-width: 457px
     margin-bottom: 40px
+    +lg
+      font-size: 30px
+    +md
+      font-size: 20px
+    +sm
+      max-width: 220px
+    +xsm
+      text-align: center
+      margin-bottom: 20px
 
   &__link
     display: inline-flex
     align-items: center
     justify-content: center
-    width: 292px
-    height: 77px
     background: $white
     font-weight: 700
+    font-size: 20px
     color: $black
     border-radius: 10px
+    padding: 25.5px 26px
+    white-space: nowrap
+    +lg
+      padding: 20px 20px
+      font-size: 16px
+    +md
+      padding: 12px 12px
+      font-size: 12px
+    +sm
+      padding: 10px 10px
     &:hover
       color: lighten($black, 10%)
       background: darken($white, 10%)
 
   &__img
+    max-width: 309px
+    +md
+      max-width: 200px
+    +sm
+      max-width: 100px

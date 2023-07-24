@@ -230,6 +230,10 @@
     fill: $white
 
 .to-basket
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
   font-weight: 700
   font-size: 22px
   line-height: 24px
@@ -238,9 +242,10 @@
   border: none
   border-radius: 10px
   margin: 0 auto
-  display: block
-  padding: 28.66px 138.3px 24.59px 122.33px
+  padding: 26.5px 30px
   white-space: nowrap
+  +md
+    padding: 18px 30px
 
 .white-btn
   display: inline-block

@@ -1,5 +1,11 @@
 .choose-news
   padding: 105px 0 126px
+  +lg
+    padding-bottom: 60px
+  +md
+    padding-top: 70px
+  +xsm
+    padding-top: 50px
 
   &__content
     position: relative
@@ -11,10 +17,17 @@
   &__title
     max-width: 1063px
     margin-bottom: 49px
+    +xxl
+      max-width: 815px
+    +lg
+      max-width: 655px
+    +md
+      max-width: 490px
+    +sm
+      max-width: 100%
+      text-align: center
     h2
-      font-weight: 400
-      font-size: 64px
-      line-height: 120%
+      margin-bottom: 0
 
   &__text
     max-width: 590px

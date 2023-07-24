@@ -60,7 +60,7 @@
     opacity: 0
     visibility: hidden
 
-.choices[data-type*=select-one] .choices__inner
+.sport-select .choices[data-type*=select-one] .choices__inner
   padding-bottom: 14.5px
   +xl
     padding-bottom: 11.5px
@@ -108,14 +108,14 @@
 .choices__list--dropdown .choices__placeholder
   display: none
 
-.sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
-  font-family: $deff
-  font-weight: 400
-  font-size: 16px
-  +md
-    font-size: 14px
-  +sm
-    font-size: 12px
+// .sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+//   font-family: $deff
+//   font-weight: 400
+//   font-size: 16px
+//   +md
+//     font-size: 14px
+//   +sm
+//     font-size: 12px
 
 .sport-select .choices__list--dropdown
   top: calc( 100% - 30px )
@@ -142,14 +142,17 @@
 /*==============================Sorting-Select=================================*/ 
 .sorting-select .choices
   font-family: $deff
-  max-width: 280px
+  width: fit-content
 
 .sorting-select .choices__inner
-  padding: 14.5px 30px 14.5px 27px !important
+  padding: 14.5px 30px 14.5px 27px
   color: $black
   font-weight: 700
   font-size: 20px
   white-space: nowrap
+  +lg
+    padding: 10px 30px 10px 18px
+    font-size: 16px
 
 .sorting-select .choices__list--single
   padding: 0
@@ -177,11 +180,21 @@
 
 .sorting-select .choices.is-open .choices__inner
   color: $white
-  border: none
-  padding: 15.5px 31px 15.5px 28px !important
+  border-color: transparent
   &::after
     opacity: 1
     visibility: visible
+
+.sorting-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  font-family: $deff
+  font-weight: 400
+  font-size: 16px
+  +lg
+    font-size: 12px
+//     font-size: 14px
+//   +sm
+//     font-size: 12px
+
 /*==============================Sorting-Select=================================*/ 
 
 /*==============================Style-Select=================================*/ 

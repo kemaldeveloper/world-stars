@@ -314,23 +314,23 @@ multiSelect();
 
 // MultiSelect function end
 
-const chooseForm = $('#choose-form');
+// const chooseForm = $('#choose-form');
 
-chooseForm.hide();
+// chooseForm.hide();
 
-$('.choose-btn').on('click', function () {
-  localStorage.setItem('choose-news', true);
+// $('.choose-btn').on('click', function () {
+//   localStorage.setItem('choose-news', true);
 
-  $('.choose-news__content-delete').hide(1000, function () {
-    $(this).remove();
-  });
-  chooseForm.show(1000);
-});
+//   $('.choose-news__content-delete').hide(1000, function () {
+//     $(this).remove();
+//   });
+//   chooseForm.show(1000);
+// });
 
-if (localStorage.getItem('choose-news')) {
-  $('.choose-news__content-delete').remove();
-  chooseForm.show();
-}
+// if (localStorage.getItem('choose-news')) {
+//   $('.choose-news__content-delete').remove();
+//   chooseForm.show();
+// }
 
 const showPassword = () => {
   const showBtn = $('.show-btn');
@@ -361,7 +361,7 @@ filterBtnParent.each((index, item) => {
   });
 });
 
-const sound = $('.sound')[0];
-$('.submit').hover((e) => {
-  sound.play();
-});
+// const sound = $('.sound')[0];
+// $('.submit').hover((e) => {
+//   sound.play();
+// });

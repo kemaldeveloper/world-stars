@@ -4,9 +4,6 @@
   &__content
 
   &__title
-    font-weight: 400
-    font-size: 64px
-    line-height: 120%
     margin-bottom: 29px
 
   &__list
@@ -15,6 +12,12 @@
     column-gap: 22px
     row-gap: 63px
     margin-bottom: 90px
+    +lg
+      grid-template-columns: repeat(2, 1fr)
+    +sm
+      margin-bottom: 60px
+    +xsm
+      grid-template-columns: 1fr
 
   &__item
 
@@ -37,40 +40,69 @@
     max-width: 378px
     color: $black
     margin-bottom: 30px
-    +min_md
-      &:hover
+    +xl
+      font-size: 22px
+    +lg
+      font-size: 17px
+      line-height: 26px
+    +sm
+      font-size: 13px
+      line-height: 19px
+      margin-bottom: 10px
+    +xsm
+      font-size: 16px
+      text-align: center
+    &:hover
+      +min_md
         color: lighten($black, 30%)
+      +md
+        color: $black
 
   &__item-descr
     display: flex
     align-items: center
+    flex-wrap: wrap
+    +xsm
+      justify-content: center
     span
       font-weight: 400
       font-size: 16px
       margin-right: 4px
-    span:nth-child(1)
+      +lg
+        font-size: 12px
+      +xsm
+        font-size: 14px
     span:nth-child(2)
       color: #FF5C01
+      +xsm
+        margin-right: 15px
     span:nth-child(3)
       display: inline-block
       width: 25px
       height: 1px
       background: $black
       margin: 0 13px
-    span:nth-child(4)
+      +lg
+        width: 15px
+        margin: 0 7px
+      +sm
+        display: none
 
   &__footer
     display: flex
     justify-content: space-between
     align-items: center
+    +sm
+      flex-direction: column
+      row-gap: 25px
 
   &__more-link
-    display: flex
-    justify-content: center
-    align-items: center
-    column-gap: 31px
-    font-weight: 700
-    font-size: 20px
+    // display: flex
+    // justify-content: center
+    // align-items: center
+    // column-gap: 31px
+    // font-weight: 700
+    // font-size: 20px
     color: $black
     white-space: nowrap
     .icon--more-arrow

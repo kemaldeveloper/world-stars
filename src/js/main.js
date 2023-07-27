@@ -448,3 +448,14 @@ themeSwitcher(sportThemeBtn, 'wrapper sport-bg')
 themeSwitcher(movieThemeBtn, 'wrapper movie-bg')
 themeSwitcher(musicThemeBtn, 'wrapper music-bg')
 themeSwitcher(fashionThemeBtn, 'wrapper fashion-bg')
+
+const personsItem = $('.persons-likes__item')
+
+function personsStatusSwitcher() {
+
+  personsItem.on('click', function (e) {
+    $(this).toggleClass('active')
+  })
+}
+
+personsStatusSwitcher()

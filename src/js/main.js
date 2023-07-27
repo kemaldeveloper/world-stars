@@ -7,7 +7,7 @@ const breakpoints = {
   md: 768,
   sm: 576,
   xsm: 375,
-};
+}
 
 // Media quires
 const MQ = {
@@ -18,90 +18,90 @@ const MQ = {
   isSM: false,
   isXSM: false,
   updateState: function () {
-    this.wWidth = $(window).width();
+    this.wWidth = $(window).width()
 
     for (let key in breakpoints) {
-      this['is' + key.toUpperCase()] = this.wWidth <= breakpoints[key];
+      this['is' + key.toUpperCase()] = this.wWidth <= breakpoints[key]
     }
   },
-};
+}
 
-MQ.updateState();
+MQ.updateState()
 
 $(document).ready(function () {
-  const checkboxInput = $('.choose-form__label-content input[type=checkbox]');
+  const checkboxInput = $('.choose-form__label-content input[type=checkbox]')
   function favoriteStarsSwitcher() {
     checkboxInput.each((index, item) => {
-      const isChecked = $(item).prop('checked');
+      const isChecked = $(item).prop('checked')
 
       if (isChecked) {
-        $(item).parent().addClass('label-active');
-        $(item).parent().find('.favourite-btn').addClass('fav-active');
+        $(item).parent().addClass('label-active')
+        $(item).parent().find('.favourite-btn').addClass('fav-active')
       } else {
-        $(item).parent().removeClass('label-active');
-        $(item).parent().find('.favourite-btn').removeClass('fav-active');
+        $(item).parent().removeClass('label-active')
+        $(item).parent().find('.favourite-btn').removeClass('fav-active')
       }
-    });
+    })
   }
-  favoriteStarsSwitcher();
+  favoriteStarsSwitcher()
 
-  checkboxInput.on('change', favoriteStarsSwitcher);
-});
+  checkboxInput.on('change', favoriteStarsSwitcher)
+})
 
-$(window).on('load', function () {});
+$(window).on('load', function () { })
 
 $(window).on('resize', function () {
-  MQ.updateState();
-});
+  MQ.updateState()
+})
 
 // COMMON FUNCTIONS
 
 // Popup opener
 $('.js-popup').on('click', function (event) {
-  event.preventDefault();
-  let popupID = $(this).attr('href');
+  event.preventDefault()
+  let popupID = $(this).attr('href')
 
-  mfpPopup(popupID);
-});
+  mfpPopup(popupID)
+})
 
 // Mobile menu toggle
 $('.js-menu').on('click', function () {
-  $(this).toggleClass('is-active');
-  $('.menu').toggleClass('is-opened');
-});
+  $(this).toggleClass('is-active')
+  $('.menu').toggleClass('is-opened')
+})
 
 // Phone input mask
 // $('input[type="tel"]').inputmask({
 //   mask: '+7 (999) 999-99-99',
 //   showMaskOnHover: false,
-// });
+// })
 
 // E-mail Ajax Send
 // $('form').on('submit', function (e) {
-//   e.preventDefault();
+//   e.preventDefault()
 
-//   let form = $(this);
-//   let formData = {};
-//   formData.data = {};
+//   let form = $(this)
+//   let formData = {}
+//   formData.data = {}
 
 //   // Serialize
 //   form.find('input, textarea').each(function () {
-//     let name = $(this).attr('name');
-//     let title = $(this).attr('data-name');
-//     let value = $(this).val();
+//     let name = $(this).attr('name')
+//     let title = $(this).attr('data-name')
+//     let value = $(this).val()
 
 //     formData.data[name] = {
 //       title: title,
 //       value: value,
-//     };
+//     }
 
 //     if (name === 'subject') {
 //       formData.subject = {
 //         value: value,
-//       };
-//       delete formData.data.subject;
+//       }
+//       delete formData.data.subject
 //     }
-//   });
+//   })
 
 //   $.ajax({
 //     type: 'POST',
@@ -111,24 +111,24 @@ $('.js-menu').on('click', function () {
 //   }).done(function (data) {
 //     if (data.status === 'success') {
 //       if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-//         form.find('.form-result').addClass('form-result--success');
+//         form.find('.form-result').addClass('form-result--success')
 //       } else {
-//         mfpPopup('#success');
+//         mfpPopup('#success')
 //       }
 
 //       setTimeout(function () {
 //         if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-//           form.find('.form-result').removeClass('form-result--success');
+//           form.find('.form-result').removeClass('form-result--success')
 //         }
-//         $.magnificPopup.close();
-//         form.trigger('reset');
-//       }, 3000);
+//         $.magnificPopup.close()
+//         form.trigger('reset')
+//       }, 3000)
 //     } else {
-//       alert('Ajax result: ' + data.status);
+//       alert('Ajax result: ' + data.status)
 //     }
-//   });
-//   return false;
-// });
+//   })
+//   return false
+// })
 
 const mfpPopup = function (popupID, source) {
   // https://dimsemenov.com/plugins/magnific-popup/
@@ -142,15 +142,15 @@ const mfpPopup = function (popupID, source) {
     preloader: false,
     midClick: true,
     removalDelay: 300,
-    closeMarkup: '<button type="button" class="mfp-close">&times;</button>',
+    closeMarkup: '<button type="button" class="mfp-close">&times</button>',
     mainClass: 'mfp-fade-zoom',
     // callbacks: {
     // 	open: function() {
-    // 		$('.source').val(source);
+    // 		$('.source').val(source)
     // 	}
     // }
-  });
-};
+  })
+}
 
 // Sliders begin
 
@@ -181,9 +181,9 @@ const topSlider = new Swiper('.top-slider', {
       slidesPerView: 3,
     },
   },
-});
+})
 
-const cloningSliderElements = $('.meets__track-item').clone();
+const cloningSliderElements = $('.meets__track-item').clone()
 
 new Swiper('.meets__track', {
   loop: true,
@@ -203,7 +203,7 @@ new Swiper('.meets__track', {
   },
   on: {
     beforeInit: function () {
-      $('.meets__track-wrapper').append(cloningSliderElements);
+      $('.meets__track-wrapper').append(cloningSliderElements)
     },
   },
   breakpoints: {
@@ -218,7 +218,7 @@ new Swiper('.meets__track', {
       slidesPerView: 3,
     },
   },
-});
+})
 
 new Swiper('.slider-meets', {
   loop: true,
@@ -236,7 +236,7 @@ new Swiper('.slider-meets', {
       slidesPerView: 1,
     },
   },
-});
+})
 
 new Swiper('.shop-slider', {
   spaceBetween: 32,
@@ -256,7 +256,7 @@ new Swiper('.shop-slider', {
       centeredSlides: true,
     },
   },
-});
+})
 
 new Swiper('.photo-slider', {
   slidesPerView: 1,
@@ -265,12 +265,12 @@ new Swiper('.photo-slider', {
     nextEl: '.photo-next',
     prevEl: '.photo-prev',
   },
-});
+})
 
 // multiSlider function begin
 
 const multiSlider = () => {
-  const styleSliders = document.querySelectorAll('.style__item');
+  const styleSliders = document.querySelectorAll('.style__item')
 
   styleSliders.forEach((item) => {
     new Swiper(item.querySelector('.style-slider'), {
@@ -278,11 +278,11 @@ const multiSlider = () => {
         nextEl: item.querySelector('.style-button-next'),
         prevEl: item.querySelector('.style-button-prev'),
       },
-    });
-  });
-};
+    })
+  })
+}
 
-multiSlider();
+multiSlider()
 
 // multiSlider function end
 
@@ -291,7 +291,7 @@ multiSlider();
 // MultiSelect function begin
 
 const multiSelect = () => {
-  const selects = document.querySelectorAll('.js-choice');
+  const selects = document.querySelectorAll('.js-choice')
 
   selects.forEach((item) => {
     new Choices(item, {
@@ -302,62 +302,149 @@ const multiSelect = () => {
       classNames: {
         flippedState: '',
       },
-    });
-  });
-};
+    })
+  })
+}
 
-multiSelect();
+multiSelect()
 
 // MultiSelect function end
 
-// const chooseForm = $('#choose-form');
+// const chooseForm = $('#choose-form')
 
-// chooseForm.hide();
+// chooseForm.hide()
 
 // $('.choose-btn').on('click', function () {
-//   localStorage.setItem('choose-news', true);
+//   localStorage.setItem('choose-news', true)
 
 //   $('.choose-news__content-delete').hide(1000, function () {
-//     $(this).remove();
-//   });
-//   chooseForm.show(1000);
-// });
+//     $(this).remove()
+//   })
+//   chooseForm.show(1000)
+// })
 
 // if (localStorage.getItem('choose-news')) {
-//   $('.choose-news__content-delete').remove();
-//   chooseForm.show();
+//   $('.choose-news__content-delete').remove()
+//   chooseForm.show()
 // }
 
 const showPassword = () => {
-  const showBtn = $('.show-btn');
-  const passInput = $('.password-input');
+  const showBtn = $('.show-btn')
+  const passInput = $('.password-input')
 
   showBtn.on('click', function (e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
+    e.preventDefault()
+    $(this).toggleClass('active')
 
     if ($(this).parent().find(passInput).attr('type') === 'password') {
-      $(this).parent().find(passInput).attr('type', 'text');
+      $(this).parent().find(passInput).attr('type', 'text')
     } else {
-      $(this).parent().find(passInput).attr('type', 'password');
+      $(this).parent().find(passInput).attr('type', 'password')
     }
-  });
-};
+  })
+}
 
-showPassword();
+showPassword()
 
-const filterBtnParent = $('.js-filters');
+const filterBtnParent = $('.js-filters')
 
 filterBtnParent.each((index, item) => {
-  const filterBtn = $(item).find('.filter-btn');
+  const filterBtn = $(item).find('.filter-btn')
 
   filterBtn.on('click', function () {
-    filterBtn.removeClass('active');
-    $(this).addClass('active');
-  });
+    filterBtn.removeClass('active')
+    $(this).addClass('active')
+  })
+})
+
+const titleInput = $('#titleInput')
+const proposeTextarea = $('.propose-form__textarea')
+const authorInput = $('#authorInput')
+const result = $('.input-result')
+const proposeBtn = $('.propose-form-submit')
+
+const inputLimit = (input, limit) => {
+  input.parent().find(result).text(`0 / ${limit} Знаков`)
+  input.on('input', function () {
+    let textLength = $(this).val().length
+    $(this).parent().find(result).text(`${textLength} / ${limit} Знаков`)
+
+    if (textLength > limit) {
+      $(this).css('border-color', 'red')
+      $(this).parent().find(result).css('color', 'red')
+      // proposeBtn.prop('disabled', true)
+    } else {
+      $(this).css('border-color', '#D8D8D8')
+      $(this).parent().find(result).css('color', '#000')
+      // proposeBtn.prop('disabled', false)
+    }
+  })
+}
+
+inputLimit(titleInput, 100)
+inputLimit(proposeTextarea, 1000)
+inputLimit(authorInput, 500)
+
+
+
+const formImagesQ = $('.photo-upload__input')
+const formPreviewsQ = $('.photo-upload')
+
+formImagesQ.each((i, item) => {
+  const currentPreviewQ = formPreviewsQ[i]
+
+  $(item).on('change', (e) => {
+    if (!e.target.files[0]) {
+      return
+    }
+
+    const fileUrlQ = URL.createObjectURL(e.target.files[0])
+    setFileElementQ(fileUrlQ, currentPreviewQ)
+  })
+})
+
+
+function setFileElementQ(url, element) {
+  $(element).prepend(`
+  <div class="photo-upload__preview">
+    <img src="${url}" alt="">
+  </div>
+  `)
+}
+
+const videoInput = $('.video-upload__input')
+const videoContainer = $('.video-upload')
+
+videoInput.on("change", function (e) {
+  const videoUrl = URL.createObjectURL(this.files[0]);
+  setVideoFile(videoUrl, videoContainer)
 });
 
-// const sound = $('.sound')[0];
-// $('.submit').hover((e) => {
-//   sound.play();
-// });
+function setVideoFile(url, element) {
+  $(element).prepend(`
+  <video class="video-upload__preview" width="100%" height="100%" controls>
+    <source src="${url}" />
+  </video>
+  `)
+}
+
+
+const sportThemeBtn = $('#sportTheme'),
+  movieThemeBtn = $('#movieTheme'),
+  musicThemeBtn = $('#musicTheme'),
+  fashionThemeBtn = $('#fashionTheme')
+
+
+function themeSwitcher(element, classNames) {
+  element.on('click', function (e) {
+    e.preventDefault()
+    $(this).addClass('active')
+    $(this).parent().find('.theme-btn').not(this).removeClass('active')
+    $('.wrapper').removeClass().addClass(classNames)
+  })
+}
+
+themeSwitcher(sportThemeBtn, 'wrapper sport-bg')
+themeSwitcher(movieThemeBtn, 'wrapper movie-bg')
+themeSwitcher(musicThemeBtn, 'wrapper music-bg')
+themeSwitcher(fashionThemeBtn, 'wrapper fashion-bg')

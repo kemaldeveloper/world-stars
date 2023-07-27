@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#000" />
+
+    <title>World Stars</title>
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon/favicon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/libs.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <div class="wrapper sport-bg">
+      <header class="header">
+  <div class="container">
+    <div class="header__content">
+      <a href="/" class="logo">
+        <svg class="icon icon--logo"><use xlink:href="assets/svg-sprite.svg#logo"></use></svg>
+      </a>
+      <div class="header__actions">
+        <a href="#" class="header__search">
+          <svg class="icon icon--search"><use xlink:href="assets/svg-sprite.svg#search"></use></svg>
+        </a>
+        <a href="#" class="header__notice">
+          <svg class="icon icon--notice"><use xlink:href="assets/svg-sprite.svg#notice"></use></svg>
+          <span></span>
+        </a>
+        <a href="#" class="header__profile">
+          <div class="header__profile-img">
+            <img src="assets/images/profile.png" alt="profile-img" />
+          </div>
+          <span class="header__profile-name">Соболев А.А.</span>
+          <svg class="icon icon--arrow"><use xlink:href="assets/svg-sprite.svg#arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main">
+  <section class="propose-screen">
+  <div class="container">
+    <div class="propose-screen__content">
+      <div class="row">
+        <div class="col-12 pb-5">
+          <div class="propose-screen__header js-filters">
+            <button type="button" class="filter-btn">Бразилия</button>
+            <button type="button" class="filter-btn">Россия</button>
+            <button type="button" class="filter-btn">Индия</button>
+            <button type="button" class="filter-btn">Китай</button>
+            <button type="button" class="filter-btn">ЮАР</button>
+            <button type="button" class="filter-btn">Другие</button>
+          </div>
+        </div>
+        <div class="col-12 pb-5">
+          <div class="propose-screen__title title">
+            <h2>
+              Предложи на сайт <br />
+              свою любимую звезду футбола
+            </h2>
+          </div>
+        </div>
+        <div class="col-8 d-flex align-items-start justify-content-between">
+          <div class="propose-screen__text">
+            <p>
+              Напиши текст о мировой звезде, загрузи фотографии и видео, получи 5 лайков в своем чате и твоя звезда
+              опубликуется на сайте
+            </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="propose-screen__img">
+            <img src="assets/images/propose-sport/ball.png" alt="ball-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="propose-favorite">
+  <div class="container">
+    <div class="propose-favorite__content">
+      <div class="propose-favorite__body">
+        <div class="propose-favorite__likes">
+          <svg class="icon icon--heart active"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+          <svg class="icon icon--heart active"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+          <svg class="icon icon--heart active"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+          <svg class="icon icon--heart active"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+          <svg class="icon icon--heart"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+        </div>
+        <div class="propose-favorite__descr">
+          <span>Лайк поставили:</span>
+        </div>
+        <div class="propose-favorite__persons persons-likes">
+          <div class="persons-likes__item">
+            <div class="persons-likes__img">
+              <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+            </div>
+            <div class="persons-likes__name">
+              <span>Екатерина</span>
+            </div>
+          </div>
+          <div class="persons-likes__item">
+            <div class="persons-likes__img">
+              <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+            </div>
+            <div class="persons-likes__name">
+              <span>Екатерина</span>
+            </div>
+          </div>
+          <div class="persons-likes__item">
+            <div class="persons-likes__img">
+              <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+            </div>
+            <div class="persons-likes__name">
+              <span>Екатерина</span>
+            </div>
+          </div>
+          <div class="persons-likes__item">
+            <div class="persons-likes__img">
+              <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+            </div>
+            <div class="persons-likes__name">
+              <span>Екатерина</span>
+            </div>
+          </div>
+          <div class="persons-likes__item">
+            <div class="persons-likes__img">
+              <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+            </div>
+            <div class="persons-likes__name">
+              <span>Екатерина</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="propose-main">
+  <div class="container">
+    <div class="propose-main__content">
+      <form action="#" method="get" class="propose-form">
+        <label class="propose-form__label">
+          <input type="text" name="title" id="titleInput" class="propose-form__input" placeholder="Введите заголовок" />
+          <div class="input-result"></div>
+        </label>
+        <div class="propose-form__wrap">
+          <label class="propose-form__label">
+            <textarea
+              name="text"
+              class="propose-form__textarea"
+              placeholder="Введите текст О мировой звезде:"
+            ></textarea>
+            <span>Карьера, награды:</span>
+            <div class="input-result"></div>
+          </label>
+          <label class="propose-form__label">
+            <input
+              type="text"
+              name="author"
+              id="authorInput"
+              class="propose-form__input"
+              placeholder="Автор: Петров Александр"
+            />
+            <div class="input-result"></div>
+          </label>
+        </div>
+        <label class="propose-form__checkbox">
+          <input type="checkbox" name="anonym" />
+          <span>
+            <svg class="icon icon--checkbox"><use xlink:href="assets/svg-sprite.svg#checkbox"></use></svg>
+          </span>
+          Анонимно
+        </label>
+        <div class="propose-form__upload">
+          <div class="propose-form__upload-box mb-5">
+            <div class="propose-form__upload-title">
+              <p>Загрузите фотографии и видео мировой звезды, которые хотите выложить на сайт</p>
+            </div>
+            <div class="card-warning">
+              <svg class="icon icon--attention"><use xlink:href="assets/svg-sprite.svg#attention"></use></svg>
+              <p>
+                Вы можете загружать фотографии и видео, находящиеся в открытом доступе! Контент в соответствии с
+                договором
+              </p>
+            </div>
+          </div>
+          <div class="photo-upload">
+            <div class="photo-upload__item">
+              <input id="formImage" type="file" accept=".jpg, .png, .gif" name="file[]" class="photo-upload__input" />
+              <img class="plus-img" src="assets/images/blocks/plus.svg" alt="plus" />
+              <span class="upload-descr">Добавить фото</span>
+            </div>
+          </div>
+          <div class="video-upload">
+            <div class="video-upload__item">
+              <input type="file" name="videos[]" class="video-upload__input" accept="video/*" />
+              <img class="plus-img" src="assets/images/blocks/plus.svg" alt="plus" />
+              <span class="upload-descr">Добавить видео</span>
+            </div>
+          </div>
+        </div>
+        <div class="propose-form__footer">
+          <div class="propose-form__footer-title">
+            <p>Выберите вид деятельности Мировой Звезды</p>
+          </div>
+          <div class="propose-form__footer-wrap">
+            <button type="submit" class="accent-btn">Предложить новость</button>
+          </div>
+        </div>
+      </form>
+      <div class="propose-main__content-img">
+        <img src="assets/images/blocks/man-laptop.png" alt="" />
+      </div>
+    </div>
+    <div class="propose-main__footer">
+      <div class="accent-btn">Выбери фон для своей новости</div>
+      <div class="propose-main__footer-wrap">
+        <button class="theme-btn" id="sportTheme">1</button>
+        <button class="theme-btn" id="movieTheme">2</button>
+        <button class="theme-btn" id="musicTheme">3</button>
+        <button class="theme-btn" id="fashionTheme">4</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+      <!-- Footer-->
+<footer class="footer">
+  <div class="container">
+    <a href="/" class="logo">
+      <svg class="icon icon--logo"><use xlink:href="assets/svg-sprite.svg#logo"></use></svg>
+    </a>
+    <div class="footer__content">
+      <div class="footer__box">
+        <a href="#" class="footer__link">О нас</a>
+        <a href="#" class="footer__link">Словарь сайта</a>
+        <a href="#" class="footer__link">Контакты</a>
+      </div>
+      <div class="footer__box">
+        <a href="#" class="footer__link">Главная</a>
+        <a href="#" class="footer__link">Звезды кино</a>
+        <a href="#" class="footer__link">Мода</a>
+        <a href="#" class="footer__link">Встречи со звездами</a>
+        <a href="#" class="footer__link">Знакомься дружи</a>
+      </div>
+      <div class="footer__box">
+        <a href="#" class="footer__link">Поддержка</a>
+        <a href="#" class="footer__link">Social Media</a>
+        <a href="#" class="footer__link">Privacy Policy</a>
+        <a href="#" class="footer__link">Term of service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+    </div>
+  </body>
+</html>

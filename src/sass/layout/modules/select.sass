@@ -1,7 +1,7 @@
 /*==============================Sport-Select=================================*/ 
 .sport-select .choices
   font-family: $deff
-  width: 152px
+  width: fit-content
   z-index: 10
   +lg
     width: 130px
@@ -18,20 +18,13 @@
 
 .sport-select .choices.is-open .choices__inner
   color: $white
-  border: none
-  padding: 8.5px 8.5px
-  +xl
-    padding: 12.5px 5.5px
-  +md
-    padding: 11px 5.5px
-  +sm
-    padding: 7px 5.5px
-    &::after
-      opacity: 1
-      visibility: visible
+  border-color: transparent
+  &::after
+    opacity: 1
+    visibility: visible
 
 .sport-select .choices__inner
-  padding: 13.5px 7.5px
+  padding: 20px 66px
   border: 1px solid #000
   border-radius: 5px
   position: relative
@@ -40,6 +33,7 @@
   justify-content: center
   align-items: center
   min-height: 0
+  background: transparent
   +xl
     padding: 11.5px 4.5px
   +md
@@ -60,27 +54,16 @@
     opacity: 0
     visibility: hidden
 
-.sport-select .choices[data-type*=select-one] .choices__inner
-  padding-bottom: 14.5px
-  +xl
-    padding-bottom: 11.5px
-  +md
-    padding-bottom: 10px
-  +sm
-    padding-bottom: 6px
-
 .sport-select .choices__list--single
-  font-weight: 400
-  font-size: 20px
+  font-weight: 700
+  font-size: 18px
   line-height: 100%
-  +xl
-    padding: 0 16px 0 0
-  +lg
-    font-size: 18px
-  +md
-    font-size: 14px
-  +xsm
-    font-size: 12px
+  padding: 0
+
+.sport-select .choices__item.choices__item--choice.choices__item--selectable
+  font-weight: 400
+  font-size: 16px
+  padding: 10px
 
 .choices[data-type*=select-one]::after
   content: ''
@@ -108,23 +91,9 @@
 .choices__list--dropdown .choices__placeholder
   display: none
 
-// .sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
-//   font-family: $deff
-//   font-weight: 400
-//   font-size: 16px
-//   +md
-//     font-size: 14px
-//   +sm
-//     font-size: 12px
-
 .sport-select .choices__list--dropdown
-  top: calc( 100% - 30px )
-  padding-top: 30px
   max-height: 250px
   overflow: auto
-  +sm
-    top: calc( 100% - 24px )
-    padding-top: 24px
 
 .sport-select .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
   +sm
@@ -135,8 +104,9 @@
 
 .sport-select .choices__list--dropdown.is-active
   border: 1px solid $black
-  border-top-width: 0
-  border-radius: 0 0 14px 14px
+  // border-radius: 14px
+  // border-top-width: 0
+  border-radius: 5px 5px 14px 14px
 /*==============================Sport-Select=================================*/ 
 
 /*==============================Sorting-Select=================================*/ 

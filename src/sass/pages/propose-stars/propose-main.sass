@@ -1,0 +1,273 @@
+.propose-main
+
+  &__content
+    background: $white
+    border-radius: 20px
+    border: 1px solid #8D9DA9
+    box-shadow: 0px 4px 24px 0px rgba(178, 178, 178, 0.25)
+    padding: 48px 48px 48px 48px
+    position: relative
+
+  &__content-img
+    position: absolute
+    right: 20px
+    bottom: 0
+
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    padding: 72px 0 64px
+    column-gap: 41px
+
+  &__footer-wrap
+    display: flex
+    column-gap: 20px
+
+.propose-form
+
+  &__label
+    display: inline-block
+
+  &>label:first-child
+    margin-bottom: 38px
+    input
+      font-weight: 400
+      font-size: 18px
+      line-height: 130%
+      border: 1px solid $border-cl
+      border-radius: 10px
+      padding: 20px 20px 20px 30px
+      margin-bottom: 10px
+      width: 764px
+
+      &::placeholder
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: $input-cl
+
+  &__wrap
+    border: 1px solid $border-cl
+    border-radius: 10px
+    padding: 22px 20px 15px 33px
+    display: flex
+    flex-direction: column
+
+    label:nth-child(1)
+      position: relative
+      margin-bottom: 41px
+
+      span
+        position: absolute
+        left: 0
+        bottom: -15px
+
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+
+        color: $input-cl
+
+      .input-result
+        position: absolute
+        right: 0
+        bottom: 14px
+
+    label:nth-child(2)
+      position: relative
+      input
+        border: none
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        padding: 0
+        padding: 0 175px 0 0
+        &::placeholder
+          color: $input-cl
+          font-weight: 400
+          font-size: 18px
+          line-height: 130%
+          text-decoration: underline
+
+      .input-result
+        position: absolute
+        bottom: 0
+        right: 0
+
+  &__textarea
+    font-weight: 400
+    font-size: 18px
+    line-height: 130%
+    border: 1px dotted $input-cl
+    border-width: 0 0 1px 0
+    resize: none
+    padding: 0 175px 0 0
+    height: 105px
+
+    &:placeholder
+      font-weight: 400
+      font-size: 18px
+      line-height: 130%
+      color: $input-cl
+
+  &__checkbox
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    user-select: none
+    font-weight: 400
+    font-size: 22px
+    line-height: 100%
+    margin-top: 10px
+
+    span
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 14px
+      height: 14px
+      border: 2px solid $black
+      margin-right: 10px
+      border-radius: 3px
+      svg
+        width: 8px
+        height: 8px
+        fill: $black
+        opacity: 0
+        visibility: hidden
+        transition: all 0.3s ease
+
+    input
+      display: none
+
+    input:checked + span svg
+      opacity: 1
+      visibility: visible
+
+  &__upload
+    padding-top: 99px
+
+  &__upload-box
+    display: flex
+    justify-content: space-between
+
+  &__upload-title
+    flex: 0 0 498px
+    p
+      font-weight: 400
+      font-size: 22px
+      line-height: 120%
+
+  .card-warning
+    flex: 0 0 346px
+
+  &__footer
+    padding-top: 99px
+
+  &__footer-wrap
+    display: flex
+    column-gap: 46px
+
+  &__footer-title
+    display: inline-block
+    max-width: 335px
+    margin-bottom: 40px
+    p
+      font-weight: 400
+      font-size: 22px
+      margin-bottom: 0
+
+.input-result
+  font-weight: 400
+  font-size: 18px
+  line-height: 130%
+  text-align: right
+  color: #212121
+
+.upload-descr
+  font-weight: 700
+  font-size: 16px
+  line-height: 100%
+  margin-top: 28px
+
+.photo-upload
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-rows: 176px
+  grid-auto-rows: 176px
+  justify-content: space-between
+  column-gap: 46px
+  row-gap: 40px
+  padding-bottom: 52px
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    border: 3px dashed #D9D9D9
+    overflow: hidden
+    border-radius: 10px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 10px
+
+    .plus-img
+      width: 31px
+      height: 31px
+
+  &__input
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    font-size: 0
+    padding: 0
+
+  &__preview
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 10px
+
+.video-upload
+  display: grid
+  grid-template-columns: repeat(2, 410px)
+  grid-template-rows: 230px
+  grid-auto-rows: 230px
+  column-gap: 46px
+  row-gap: 40px
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    border: 3px dashed #D9D9D9
+    position: relative
+    row-gap: 26px
+
+  &__preview
+    border-radius: 10px
+
+  &__input
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    font-size: 0
+    padding: 0

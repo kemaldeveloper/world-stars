@@ -415,7 +415,10 @@ function setVideoFile(url, element) {
 const sportThemeBtn = $('#sportTheme'),
   movieThemeBtn = $('#movieTheme'),
   musicThemeBtn = $('#musicTheme'),
-  fashionThemeBtn = $('#fashionTheme')
+  fashionThemeBtn = $('#fashionTheme'),
+  basketballThemeBtn = $('#basketballTheme'),
+  cricketThemeBtn = $('#cricketTheme'),
+  volleyballThemeBtn = $('#volleyballTheme')
 
 
 function themeSwitcher(element, classNames) {
@@ -431,6 +434,9 @@ themeSwitcher(sportThemeBtn, 'wrapper sport-bg')
 themeSwitcher(movieThemeBtn, 'wrapper movie-bg')
 themeSwitcher(musicThemeBtn, 'wrapper music-bg')
 themeSwitcher(fashionThemeBtn, 'wrapper fashion-bg')
+themeSwitcher(basketballThemeBtn, 'wrapper basketball-bg')
+themeSwitcher(cricketThemeBtn, 'wrapper cricket-bg')
+themeSwitcher(volleyballThemeBtn, 'wrapper volleyball-bg')
 
 const personsItem = $('.persons-likes__item-box')
 

@@ -1,5 +1,8 @@
 .propose-main
 
+  &--pt
+    padding-top: 100px
+
   &__content
     background: $white
     border-radius: 20px
@@ -7,11 +10,19 @@
     box-shadow: 0px 4px 24px 0px rgba(178, 178, 178, 0.25)
     padding: 48px 48px 48px 48px
     position: relative
+    +md
+      padding: 25px
 
   &__content-img
     position: absolute
     right: 20px
     bottom: 0
+    +xl
+      max-width: 145px
+    +lg
+      max-width: 100px
+    +sm
+      display: none
 
   &__footer
     display: flex
@@ -19,15 +30,23 @@
     justify-content: flex-end
     padding: 72px 0 64px
     column-gap: 41px
+    +md
+      flex-direction: column
+      justify-content: center
+      row-gap: 30px
 
   &__footer-wrap
     display: flex
     column-gap: 20px
+    +sm
+      justify-content: center
 
 .propose-form
 
   &__label
     display: inline-block
+    +xl
+      display: block
 
   &>label:first-child
     margin-bottom: 38px
@@ -40,12 +59,19 @@
       padding: 20px 20px 20px 30px
       margin-bottom: 10px
       width: 764px
+      +xl
+        width: 100%
+      +md
+        padding: 15px
+        font-size: 14px
 
       &::placeholder
         font-weight: 400
         font-size: 18px
         line-height: 130%
         color: $input-cl
+        +md
+          font-size: 14px
 
   &__wrap
     border: 1px solid $border-cl
@@ -53,10 +79,12 @@
     padding: 22px 20px 15px 33px
     display: flex
     flex-direction: column
+    +md
+      padding: 15px
 
     label:nth-child(1)
       position: relative
-      margin-bottom: 41px
+      margin-bottom: 60px
 
       span
         position: absolute
@@ -68,6 +96,9 @@
         line-height: 130%
 
         color: $input-cl
+
+        +md
+          font-size: 14px
 
       .input-result
         position: absolute
@@ -82,13 +113,20 @@
         font-size: 18px
         line-height: 130%
         padding: 0
-        padding: 0 175px 0 0
+        padding-right: 175px
+        +md
+          font-size: 14px
+          padding-right: 150px
+        +sm
+          padding-right: 10px
         &::placeholder
           color: $input-cl
           font-weight: 400
           font-size: 18px
           line-height: 130%
           text-decoration: underline
+          +md
+            font-size: 14px
 
       .input-result
         position: absolute
@@ -102,13 +140,18 @@
     border: 1px dotted $input-cl
     border-width: 0 0 1px 0
     resize: none
-    padding: 0 175px 0 0
+    padding-right: 175px
     height: 105px
+    +md
+      padding-right: 150px
+      font-size: 14px
+    +sm
+      padding: 10px
 
     &:placeholder
-      font-weight: 400
-      font-size: 18px
-      line-height: 130%
+      // font-weight: 400
+      // font-size: 18px
+      // line-height: 130%
       color: $input-cl
 
   &__checkbox
@@ -120,6 +163,8 @@
     font-size: 22px
     line-height: 100%
     margin-top: 10px
+    +sm
+      font-size: 18px
 
     span
       display: flex
@@ -151,32 +196,52 @@
   &__upload-box
     display: flex
     justify-content: space-between
+    +md
+      flex-direction: column
 
   &__upload-title
     flex: 0 0 498px
+    +xl
+      flex: 0 0 440px
+    +lg
+      flex: 0 0 275px
+    +md
+      flex: 0 0 auto
+      margin-bottom: 20px
+      text-align: center
     p
       font-weight: 400
       font-size: 22px
       line-height: 120%
+      margin-bottom: 0
+      +xl
+        font-size: 20px
+      +lg
+        font-size: 16px
 
   .card-warning
     flex: 0 0 346px
+    +lg
+      flex: 0 0 295px
+    +md
+      flex: 0 0 auto
+    +xsm
+      flex-direction: column
+      align-items: center
+      gap: 10px
 
   &__footer
     padding-top: 99px
+    +md
+      padding-top: 120px
+    +sm
+      padding-top: 60px
 
   &__footer-wrap
     display: flex
     column-gap: 46px
-
-  &__footer-title
-    display: inline-block
-    max-width: 335px
-    margin-bottom: 40px
-    p
-      font-weight: 400
-      font-size: 22px
-      margin-bottom: 0
+    +sm
+      justify-content: center
 
 .input-result
   font-weight: 400
@@ -184,12 +249,18 @@
   line-height: 130%
   text-align: right
   color: #212121
+  +lg
+    font-size: 16px
+  +sm
+    display: none
+    font-size: 10px
 
 .upload-descr
   font-weight: 700
   font-size: 16px
   line-height: 100%
-  margin-top: 28px
+  +lg
+    font-size: 12px
 
 .photo-upload
   display: grid
@@ -200,6 +271,23 @@
   column-gap: 46px
   row-gap: 40px
   padding-bottom: 52px
+  +xxl
+    grid-template-rows: 160px
+    grid-auto-rows: 160px
+  +xl
+    grid-template-columns: repeat(4, 1fr)
+  +lg
+    grid-template-rows: 125px
+    grid-auto-rows: 125px
+    column-gap: 30px
+  +md
+    grid-template-columns: repeat(3, 1fr)
+  +sm
+    grid-template-columns: repeat(2, 1fr)
+  +xsm
+    grid-template-rows: 106px
+    grid-auto-rows: 106px
+    gap: 15px
 
   &__item
     display: flex
@@ -210,6 +298,7 @@
     border: 3px dashed #D9D9D9
     overflow: hidden
     border-radius: 10px
+    row-gap: 20px
 
     img
       width: 100%
@@ -248,6 +337,17 @@
   grid-auto-rows: 230px
   column-gap: 46px
   row-gap: 40px
+  +xxl
+    grid-template-columns: repeat(2, 370px)
+  +xl
+    grid-template: 200px / repeat(2, 340px)
+    grid-auto-rows: 200px
+  +lg
+    grid-template: 170px / repeat(2, 272px)
+    grid-auto-rows: 170px
+  +md
+    grid-template: 205px / 1fr
+    grid-auto-rows: 205px
 
   &__item
     display: flex
@@ -260,6 +360,9 @@
     row-gap: 26px
 
   &__preview
+    width: 100%
+    height: 100%
+    object-fit: cover
     border-radius: 10px
 
   &__input

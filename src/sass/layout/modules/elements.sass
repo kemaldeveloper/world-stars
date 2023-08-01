@@ -38,6 +38,8 @@
   padding: 5px 23px 5px 26px
   display: flex
   column-gap: 12px
+  +xsm
+    padding: 10px
 
   p
     font-weight: 400
@@ -45,10 +47,46 @@
     line-height: 120%
     color: $white
     margin-bottom: 0
+    +xsm
+      text-align: center
 
   svg
-    // flex: 0 0 13.5px
     flex-shrink: 0
     width: 13.5px
     height: 13.5px
     fill: $white
+
+.icon--heart
+  width: 25px
+  height: 25px
+  flex-shrink: 0
+  fill: #eff3f6
+  +lg
+    width: 20px
+    height: 20px
+
+.icon--heart
+  &.active
+    fill: red
+
+.new
+  display: flex
+  justify-content: center
+  align-items: center
+
+  font-weight: 700
+  font-size: 18px
+  line-height: 120%
+
+  width: 94px
+  height: 45px
+
+  background: $accent-grnt
+  color: $white
+
+  border-radius: 0 10px
+
+  +md
+    width: 75px
+    height: 35px
+    font-size: 16px

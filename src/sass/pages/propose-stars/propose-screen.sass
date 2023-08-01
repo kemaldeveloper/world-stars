@@ -1,6 +1,11 @@
 .propose-screen
   padding-top: 65px
   padding-bottom: 50px
+  +md
+    padding-top: 40px
+  +sm
+    padding-top: 25px
+    padding-bottom: 25px
 
   &__content
 
@@ -8,6 +13,7 @@
     display: flex
     flex-wrap: wrap
     column-gap: 18px
+    row-gap: 20px
 
   &__title
 
@@ -17,5 +23,15 @@
       font-weight: 400
       font-size: 33px
       line-height: 120%
+      +xxl
+        font-size: 28px
+      +xl
+        font-size: 25px
+      +lg
+        font-size: 20px
+      +md
+        font-size: 18px
+      +sm
+        font-size: 14px
 
   &__img

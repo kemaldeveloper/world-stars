@@ -310,23 +310,6 @@ multiSelect()
 
 // MultiSelect function end
 
-// const chooseForm = $('#choose-form')
-
-// chooseForm.hide()
-
-// $('.choose-btn').on('click', function () {
-//   localStorage.setItem('choose-news', true)
-
-//   $('.choose-news__content-delete').hide(1000, function () {
-//     $(this).remove()
-//   })
-//   chooseForm.show(1000)
-// })
-
-// if (localStorage.getItem('choose-news')) {
-//   $('.choose-news__content-delete').remove()
-//   chooseForm.show()
-// }
 
 const showPassword = () => {
   const showBtn = $('.show-btn')
@@ -449,7 +432,7 @@ themeSwitcher(movieThemeBtn, 'wrapper movie-bg')
 themeSwitcher(musicThemeBtn, 'wrapper music-bg')
 themeSwitcher(fashionThemeBtn, 'wrapper fashion-bg')
 
-const personsItem = $('.persons-likes__item')
+const personsItem = $('.persons-likes__item-box')
 
 function personsStatusSwitcher() {
 

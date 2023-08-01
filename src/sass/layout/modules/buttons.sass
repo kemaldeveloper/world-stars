@@ -285,13 +285,21 @@
 .accent-btn
   display: inline-block
   padding: 20px 45px
-  border: none
-  background: $accent-grnt
-  border-radius: 10px
+
   font-weight: 700
   font-size: 18px
   line-height: 110%
+
+  background: $accent-grnt
   color: $white
+  border: none
+  border-radius: 10px
+  +lg
+    padding: 20px 25px
+    font-size: 16px
+  +xsm
+    padding: 15px 15px
+    font-size: 15px
 
 .theme-btn
   display: flex
@@ -313,6 +321,9 @@
   background: $white
 
   transition: all 0.3s ease
+  +xsm
+    width: 50px
+    height: 50px
 
   &::after
     content: ''

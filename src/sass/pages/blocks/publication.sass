@@ -1,0 +1,72 @@
+.publication
+  background: $sky-grnt
+
+  &__content
+    display: flex
+    justify-content: space-between
+    column-gap: 30px
+
+  &__body
+    padding-top: 60px
+    +xl
+      padding-top: 30px
+    +lg
+      padding-top: 20px
+    +md
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-bottom: 20px
+
+  &__title
+    max-width: 540px
+    margin-bottom: 38px
+    +md
+      text-align: center
+    h4
+      font-weight: 400
+      font-size: 40px
+      line-height: 120%
+      color: $white
+      margin-bottom: 0
+      +xxl
+        font-size: 34px
+      +xl
+        font-size: 28px
+      +lg
+        font-size: 23px
+      +xsm
+        font-size: 20px
+
+  &__text-wrap
+    display: inline-flex
+    flex-direction: column
+    row-gap: 20px
+
+  &__text
+    display: inline-flex
+    align-items: flex-start
+    column-gap: 11px
+    max-width: 400px
+
+    p
+      font-weight: 400
+      font-size: 20px
+      line-height: 120%
+      margin-bottom: 0
+      color: $white
+      +lg
+        font-size: 16px
+
+    .icon--check-white
+      width: 12px
+      height: 10px
+      flex-shrink: 0
+      fill: $white
+      transform: translateY(4px)
+
+  &__img
+    display: flex
+    align-items: flex-end
+    +md
+      display: none

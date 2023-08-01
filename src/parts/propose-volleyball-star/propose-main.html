@@ -1,0 +1,88 @@
+<section class="propose-main">
+  <div class="container">
+    <div class="propose-main__content">
+      <form action="#" method="get" class="propose-form">
+        <label class="propose-form__label">
+          <input type="text" name="title" id="titleInput" class="propose-form__input" placeholder="Введите заголовок" />
+          <div class="input-result"></div>
+        </label>
+        <div class="propose-form__wrap">
+          <label class="propose-form__label">
+            <textarea
+              name="text"
+              class="propose-form__textarea"
+              placeholder="Введите текст О мировой звезде:"
+            ></textarea>
+            <span>Карьера, награды:</span>
+            <div class="input-result"></div>
+          </label>
+          <label class="propose-form__label">
+            <input
+              type="text"
+              name="author"
+              id="authorInput"
+              class="propose-form__input"
+              placeholder="Автор: Петров Александр"
+            />
+            <div class="input-result"></div>
+          </label>
+        </div>
+        <label class="propose-form__checkbox">
+          <input type="checkbox" name="anonym" />
+          <span>
+            <svg class="icon icon--checkbox"><use xlink:href="assets/svg-sprite.svg#checkbox"></use></svg>
+          </span>
+          Анонимно
+        </label>
+        <div class="propose-form__upload">
+          <div class="propose-form__upload-box mb-5">
+            <div class="propose-form__upload-title">
+              <p>Загрузите фотографии и видео мировой звезды, которые хотите выложить на сайт</p>
+            </div>
+            <div class="card-warning">
+              <svg class="icon icon--attention"><use xlink:href="assets/svg-sprite.svg#attention"></use></svg>
+              <p>
+                Вы можете загружать фотографии и видео, находящиеся в открытом доступе! Контент в соответствии с
+                договором
+              </p>
+            </div>
+          </div>
+          <div class="photo-upload">
+            <div class="photo-upload__item">
+              <input id="formImage" type="file" accept=".jpg, .png, .gif" name="file[]" class="photo-upload__input" />
+              <img class="plus-img" src="assets/images/blocks/plus.svg" alt="plus" />
+              <span class="upload-descr">Добавить фото</span>
+            </div>
+          </div>
+          <div class="video-upload">
+            <div class="video-upload__item">
+              <input type="file" name="videos[]" class="video-upload__input" accept="video/*" />
+              <img class="plus-img" src="assets/images/blocks/plus.svg" alt="plus" />
+              <span class="upload-descr">Добавить видео</span>
+            </div>
+          </div>
+        </div>
+        <div class="propose-form__footer">
+          <!-- <div class="propose-form__footer-title"> -->
+          <!-- <p>Выберите вид деятельности Мировой Звезды</p> -->
+          <!-- </div> -->
+          <div class="propose-form__footer-wrap">
+            <button type="submit" class="accent-btn">Предложить новость</button>
+          </div>
+        </div>
+      </form>
+      <div class="propose-main__content-img">
+        <img src="assets/images/blocks/man-laptop.png" alt="" />
+      </div>
+    </div>
+    <div class="propose-main__footer">
+      <div class="accent-btn">Выбери фон для своей новости</div>
+      <div class="propose-main__footer-wrap">
+        <button class="theme-btn" id="sportTheme">1</button>
+        <button class="theme-btn" id="movieTheme">2</button>
+        <button class="theme-btn" id="musicTheme">3</button>
+        <button class="theme-btn" id="fashionTheme">4</button>
+      </div>
+    </div>
+  </div>
+</section>

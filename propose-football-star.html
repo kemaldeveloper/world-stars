@@ -52,7 +52,7 @@
   <div class="container">
     <div class="propose-screen__content">
       <div class="row">
-        <div class="col-12 pb-5">
+        <div class="col-12 pb-md-5 pb-4">
           <div class="propose-screen__header js-filters">
             <button type="button" class="filter-btn">Бразилия</button>
             <button type="button" class="filter-btn">Россия</button>
@@ -62,7 +62,7 @@
             <button type="button" class="filter-btn">Другие</button>
           </div>
         </div>
-        <div class="col-12 pb-5">
+        <div class="col-12 pb-md-5 pb-4">
           <div class="propose-screen__title title">
             <h2>
               Предложи на сайт <br />
@@ -70,7 +70,7 @@
             </h2>
           </div>
         </div>
-        <div class="col-8 d-flex align-items-start justify-content-between">
+        <div class="col-md-8 col-7 d-flex align-items-start justify-content-between">
           <div class="propose-screen__text">
             <p>
               Напиши текст о мировой звезде, загрузи фотографии и видео, получи 5 лайков в своем чате и твоя звезда
@@ -78,7 +78,7 @@
             </p>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-5">
           <div class="propose-screen__img">
             <img src="assets/images/propose-sport/ball.png" alt="ball-img" />
           </div>
@@ -104,34 +104,43 @@
           </div>
           <ul class="persons-likes__list">
             <li class="persons-likes__item">
-              <div class="persons-likes__status">
-                <span>М</span>
-              </div>
-              <div class="persons-likes__img">
-                <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
-              </div>
-              <div class="persons-likes__name">
-                <span>Екатерина</span>
-              </div>
-            </li>
-            <li class="persons-likes__item">
-              <div class="persons-likes__status">
-                <span>М</span>
-              </div>
-              <div class="persons-likes__img">
-                <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
-              </div>
-              <div class="persons-likes__name">
-                <span>Екатерина</span>
+              <svg class="icon icon--heart active"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+              <div class="persons-likes__item-box">
+                <div class="persons-likes__status">
+                  <span>М</span>
+                </div>
+                <div class="persons-likes__img">
+                  <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+                </div>
+                <div class="persons-likes__name">
+                  <span>Екатерина</span>
+                </div>
               </div>
             </li>
             <li class="persons-likes__item">
-              <div class="persons-likes__status">
-                <span></span>
+              <svg class="icon icon--heart active"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+              <div class="persons-likes__item-box">
+                <div class="persons-likes__status">
+                  <span>М</span>
+                </div>
+                <div class="persons-likes__img">
+                  <img src="assets/images/propose-sport/profile-1.png" alt="profile-img" />
+                </div>
+                <div class="persons-likes__name">
+                  <span>Екатерина</span>
+                </div>
               </div>
-              <div class="persons-likes__img"></div>
-              <div class="persons-likes__name">
-                <span></span>
+            </li>
+            <li class="persons-likes__item">
+              <svg class="icon icon--heart"><use xlink:href="assets/svg-sprite.svg#heart"></use></svg>
+              <div class="persons-likes__item-box">
+                <div class="persons-likes__status">
+                  <span></span>
+                </div>
+                <div class="persons-likes__img"></div>
+                <div class="persons-likes__name">
+                  <span></span>
+                </div>
               </div>
             </li>
           </ul>
@@ -206,9 +215,9 @@
           </div>
         </div>
         <div class="propose-form__footer">
-          <div class="propose-form__footer-title">
-            <p>Выберите вид деятельности Мировой Звезды</p>
-          </div>
+          <!-- <div class="propose-form__footer-title"> -->
+          <!-- <p>Выберите вид деятельности Мировой Звезды</p> -->
+          <!-- </div> -->
           <div class="propose-form__footer-wrap">
             <button type="submit" class="accent-btn">Предложить новость</button>
           </div>
